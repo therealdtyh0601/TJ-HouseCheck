@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Lumi Studio｜Terra Hexagram Reading</title>
+
+  <!-- ===== CSS ===== -->
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/hexagram.css" />
+
+  <!-- ===== JS Engines ===== -->
+  <script src="assets/js/engine/hexagramEngine.js" defer></script>
+  <script src="assets/js/audio/bgmEngine.js" defer></script>
+  <script src="assets/js/ui/ui.js" defer></script>
+</head>
+
+<body>
+  <!-- ========================= HEADER ========================= -->
+  <header class="lumi-header">
+    <div class="logo">LUMI STUDIO</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="celestial.html">Celestial</a>
+      <a href="terra.html" class="active">Terra</a>
+      <a href="persona.html">Persona</a>
+    </nav>
+  </header>
+
+  <!-- ========================= BGM TOGGLE ========================= -->
+  <div class="bgm-toggle">
+    <button id="bgmBtn">🔈 BGM Off</button>
+  </div>
+
+  <!-- ========================= MAIN SECTION ========================= -->
+  <main class="container">
+
+    <section class="hero-block">
+      <h1 class="title">🏡 Terra Hexagram Reading</h1>
+      <p class="subtitle">Move-in • Renovation • Home Energy Flow</p>
+      <p class="desc">
+        Select your house direction and receive a simple, modern 64-hexagram
+        interpretation tailored to everyday living.
+      </p>
+    </section>
+
+    <!-- ===== Input Section ===== -->
+    <section class="input-panel">
+      <h2>Select Your House Direction</h2>
+
+      <select id="directionSelect">
+        <option value="">— Choose —</option>
+        <option value="N">North</option>
+        <option value="NE">Northeast</option>
+        <option value="E">East</option>
+        <option value="SE">Southeast</option>
+        <option value="S">South</option>
+        <option value="SW">Southwest</option>
+        <option value="W">West</option>
+        <option value="NW">Northwest</option>
+      </select>
+
+      <button id="analyzeBtn" class="primary-btn">Analyze My House Flow</button>
+    </section>
+
+    <!-- ===== CTA Block ===== -->
+    <section class="cta-block">
+      <p>Enjoying Lumi Tools?</p>
+      <a class="cta-ig" href="https://www.instagram.com/lumistudios2025" target="_blank">
+        Follow @lumistudios2025 ✨
+      </a>
+    </section>
+
+  </main>
+
+  <!-- ========================= RESULT POPUP ========================= -->
+  <div id="resultModal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close-btn" id="closeModal">&times;</span>
+
+      <h2 id="hexagramTitle"></h2>
+      <p id="hexagramSummary"></p>
+
+      <div class="result-details">
+        <h3>Home Influence</h3>
+        <p id="impact"></p>
+
+        <h3>Recommended Adjustments</h3>
+        <p id="adjustments"></p>
+
+        <h3>Energy Focus</h3>
+        <p id="energy"></p>
+      </div>
+
+      <div class="share-section">
+        <a href="https://www.instagram.com/lumistudios2025" target="_blank" class="share-btn">
+          Follow @lumistudios2025 ✨
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================= FOOTER ========================= -->
+  <footer class="lumi-footer">
+    <p>© 2025 Lumi Studio · Tian-Di-Ren Toolbox</p>
+  </footer>
+
+</body>
+</html>
