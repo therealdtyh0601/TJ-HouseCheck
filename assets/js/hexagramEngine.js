@@ -1,152 +1,102 @@
-/* -------------------------------------------------------------
-   hexagramEngine.js — Lumi Terra 64-hexagram Engine (SIM Ready)
+/* ---------------------------------------------------------
+   LUMI TERRA ENGINE v3
+   Direction → Palace → Hexagram → Interpretation
+   Uses: hexagrams64.json (clean 1–64)
+--------------------------------------------------------- */
 
-   Provides:
-   - FreeMode: direction → 8 hexagrams
-   - ProMode: direction + SIM → 64 hexagrams
-   - JSON-driven output
-------------------------------------------------------------- */
+export const TerraEngine = {
 
-const HexagramEngine = (() => {
-
-  let hexData = null; // Stores loaded 64-gua JSON results
-
-  /* ---------------------------------------------------------
-     LOAD JSON FILE
-  --------------------------------------------------------- */
-  async function loadHexagramJSON() {
-    if (hexData) return hexData;
-
-    try {
-      const res = await fetch("assets/data/hexagrams64.json");
-      hexData = await res.json();
-      return hexData;
-    } catch (err) {
-      console.error("Hexagram JSON failed to load:", err);
-      return null;
-    }
-  }
-
-  /* ---------------------------------------------------------
-     FREE TIER — 8 DIRECTIONS → 8 HEXAGRAMS
-     (Simple, user-friendly mapping)
-  --------------------------------------------------------- */
-  const freeDirectionMap = {
-    N: 2,   // 坤
-    NE: 24, // 复
-    E: 11,  // 泰
-    SE: 32, // 恒
-    S: 1,   // 乾
-    SW: 46, // 升
-    W: 12,  // 否
-    NW: 33  // 遁
-  };
-
-  /* ---------------------------------------------------------
-     SIM → LOWER TRIGRAM
-     (Space Intention Model)
-  --------------------------------------------------------- */
-  const simToTrigram = {
-    stability: "坤",
-    career: "震",
-    health: "巽",
-    inner: "坎",
-    growth: "艮",
-    visibility: "離",
-    harmony: "兌",
-    purpose: "乾"
-  };
-
-  /* ---------------------------------------------------------
-     DIRECTION → UPPER TRIGRAM
-  --------------------------------------------------------- */
-  const directionToTrigram = {
-    N: "坎",
-    NE: "艮",
-    E: "震",
-    SE: "巽",
-    S: "離",
-    SW: "坤",
-    W: "兌",
-    NW: "乾"
-  };
-
-  /* ---------------------------------------------------------
-     64-GUA MATRIX (Upper x Lower)
-     Correct King Wen 64 Hexagram Grid
-  --------------------------------------------------------- */
-  const hex64 = {
-    "坤": { "坤":2, "震":16, "坎":8, "巽":20, "乾":23, "艮":35, "離":45, "兌":12 },
-    "震": { "坤":24,"震":51,"坎":3, "巽":42, "乾":25, "艮":21, "離":17, "兌":27 },
-    "坎": { "坤":7, "震":4, "坎":29,"巽":59, "乾":6,  "艮":64, "離":47, "兌":40 },
-    "巽": { "坤":46,"震":32,"坎":48,"巽":57, "乾":18, "艮":53,"離":50, "兌":28 },
-    "乾": { "坤":15,"震":62,"坎":39,"巽":61, "乾":1,  "艮":33,"離":30, "兌":13 },
-    "艮": { "坤":36,"震":52,"坎":60,"巽":56, "乾":26, "艮":22,"離":63, "兌":41 },
-    "離": { "坤":3, "震":55,"坎":63,"巽":37, "乾":14,"艮":30,"離":34,"兌":38 },
-    "兌": { "坤":45,"震":17,"坎":47,"巽":28, "乾":31,"艮":26,"離":49,"兌":58 }
-  };
-
-  /* ---------------------------------------------------------
-     FORMAT JSON RESULT → UI
-  --------------------------------------------------------- */
-  function formatResult(hex) {
-    return {
-      hexagramNumber: hex.number || "",
-      hexagramName: hex.name || "",
-      summary: hex.summary || "",
-      impact: hex.homeImpact || hex.impact || "",
-      adjustments: hex.adjustments || hex.recommendations || "",
-      energy: hex.energy || hex.focus || ""
+  /* -------------------------------------------
+     1) Cardinal Directions → Palace Mapping
+     (You can adjust this later if you refine
+     Tian–Di–Ren or seasonal logic.)
+  ------------------------------------------- */
+  directionToPalace(direction) {
+    const map = {
+      "N": "坎",
+      "NE": "艮",
+      "E": "震",
+      "SE": "巽",
+      "S": "離",
+      "SW": "坤",
+      "W": "兌",
+      "NW": "乾"
     };
-  }
+    return map[direction] || null;
+  },
 
-  /* ---------------------------------------------------------
-     FREE MODE — get 1 of 8 hexagrams
-  --------------------------------------------------------- */
-  async function getResult(direction) {
-    await loadHexagramJSON();
+  /* -------------------------------------------
+     2) Palace → Hexagram Pool (Lumi Terra Logic)
+     Each palace contains 8 hexagrams.
+     Uses clean 1–64 set we built.
+  ------------------------------------------- */
+  palaceToHexagrams(palace) {
+    const pools = {
+      "乾": [1, 43, 14, 34, 9, 5, 26, 11],
+      "兌": [58, 17, 47, 28, 41, 61, 60, 38],
+      "離": [30, 56, 50, 38, 55, 49, 13, 37],
+      "震": [51, 21, 17, 25, 42, 3, 27, 24],
+      "巽": [57, 37, 53, 48, 18, 46, 5, 28],
+      "坎": [29, 60, 63, 48, 39, 8, 7, 46],
+      "艮": [52, 15, 39, 53, 62, 56, 31, 33],
+      "坤": [2, 23, 8, 20, 16, 35, 45, 12]
+    };
+    return pools[palace] || [];
+  },
 
-    const hexNum = freeDirectionMap[direction];
-    if (!hexNum) return null;
+  /* -------------------------------------------
+     3) SIM Mode → Result Modifier
+     (Free tier = NO modification, just tag)
+     Later for Pro-tier we can implement
+     weighting, deeper mapping, etc.
+  ------------------------------------------- */
+  applySIMTag(result, simMode) {
+    return {
+      ...result,
+      simTag: simMode || "general"
+    };
+  },
 
-    const hex = hexData.find(h => h.number === hexNum);
-    if (!hex) return null;
+  /* -------------------------------------------
+     4) Pick Hexagram
+     Deterministic: Use roomIndex for repeatability
+  ------------------------------------------- */
+  pickHexagram(hexList, roomIndex) {
+    if (!hexList.length) return null;
+    const i = roomIndex % hexList.length;
+    return hexList[i];
+  },
 
-    return formatResult(hex);
-  }
+  /* -------------------------------------------
+     5) Fetch Hexagram JSON
+  ------------------------------------------- */
+  async loadHexagrams() {
+    const res = await fetch("assets/data/hexagrams64.json");
+    return await res.json();
+  },
 
-  /* ---------------------------------------------------------
-     PRO MODE — 64-Gua logic
-     Direction → Upper Trigram
-     SIM → Lower Trigram
-     Matrix → Hexagram Number
-  --------------------------------------------------------- */
-  async function getProResult(direction, simKey) {
-    await loadHexagramJSON();
-
-    const upper = directionToTrigram[direction];
-    const lower = simToTrigram[simKey];
-
-    if (!upper || !lower) {
-      console.warn("Invalid trigram input:", { upper, lower });
-      return null;
+  /* -------------------------------------------
+     6) MAIN ENGINE
+     direction = "N" | "SE" | "SW" etc.
+     simMode   = "clarity" | "rest" | "persona" etc.
+     roomIndex = numerical anchor (0–999)
+  ------------------------------------------- */
+  async getReading(direction, simMode, roomIndex = 0) {
+    const palace = this.directionToPalace(direction);
+    if (!palace) {
+      return { error: "Invalid direction" };
     }
 
-    const hexNum = hex64[upper][lower];
-    if (!hexNum) return null;
+    const pool = this.palaceToHexagrams(palace);
+    const hexNum = this.pickHexagram(pool, roomIndex);
 
-    const hex = hexData.find(h => h.number === hexNum);
-    if (!hex) return null;
+    const allHex = await this.loadHexagrams();
+    const data = allHex.find(h => h.number === hexNum);
 
-    return formatResult(hex);
+    if (!data) {
+      return { error: "Hexagram data missing" };
+    }
+
+    return this.applySIMTag(data, simMode);
   }
-
-  /* ---------------------------------------------------------
-     EXPORT
-  --------------------------------------------------------- */
-  return {
-    getResult,
-    getProResult
-  };
-
-})();
+};
