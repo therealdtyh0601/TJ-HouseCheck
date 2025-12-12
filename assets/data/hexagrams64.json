@@ -3,472 +3,526 @@
     "number": 1,
     "name": "乾",
     "summary": "A space with strong outward drive and upward momentum.",
-    "homeImpact": "This environment pushes the person to stay active, decisive and externally focused. It sharpens ambition but may reduce sensitivity to subtle emotional signals.",
-    "usage": "For your chosen intention, the space amplifies initiative. It accelerates action but may feel intense for slower or reflective activities.",
+    "homeImpact": "People feel more active, decisive and externally engaged here. The environment boosts initiative and confidence.",
+    "usage": "For your chosen intention, this space accelerates action and increases forward movement.",
     "energy": "ascending-active"
   },
   {
-    "number": 43,
-    "name": "夬",
-    "summary": "A space with decisive, cutting, clarifying energy.",
-    "homeImpact": "This space heightens clarity and sharpens boundaries. It encourages firm choices but can make interactions feel blunt or overly direct.",
-    "usage": "For your chosen intention, this space helps remove distractions and push through hesitation, though it may feel confrontational for emotional tasks.",
-    "energy": "decisive-clear"
-  },
-  {
-    "number": 14,
-    "name": "大有",
-    "summary": "A space that radiates visibility, confidence and expressive strength.",
-    "homeImpact": "It enhances self-assurance and presence. People feel more noticeable but may also feel increased performance pressure.",
-    "usage": "For your chosen intention, this space boosts personal influence and visibility, making actions feel more ‘seen’.",
-    "energy": "radiant-expansive"
-  },
-  {
-    "number": 34,
-    "name": "大壯",
-    "summary": "A space with forceful momentum and bold forward energy.",
-    "homeImpact": "This environment intensifies willpower and assertiveness. It feels empowering but can overwhelm quieter moods.",
-    "usage": "For your chosen intention, this space delivers strong activation—good for starting things, less suited for delicate efforts.",
-    "energy": "strong-forceful"
-  },
-  {
-    "number": 9,
-    "name": "小畜",
-    "summary": "A space with gentle containment and steady accumulation.",
-    "homeImpact": "This environment calms impulsive tendencies and encourages patience, supporting small progress over dramatic moves.",
-    "usage": "For your chosen intention, this space helps maintain slow, sustainable steps and emotional pacing.",
-    "energy": "soft-sustained"
-  },
-  {
-    "number": 5,
-    "name": "需",
-    "summary": "A space where energy gathers slowly before movement.",
-    "homeImpact": "People feel pauses or delays before momentum picks up. It encourages waiting and observing.",
-    "usage": "For your chosen intention, this space stabilizes timing and supports planning.",
-    "energy": "reserved-waiting"
-  },
-  {
-    "number": 26,
-    "name": "大畜",
-    "summary": "A space of restrained strength and controlled potential.",
-    "homeImpact": "It encourages discipline and careful buildup. Expression becomes measured and intentional.",
-    "usage": "For your chosen intention, this space supports long-term accumulation and internal resilience.",
-    "energy": "contained-power"
-  },
-  {
-    "number": 11,
-    "name": "泰",
-    "summary": "A space of smooth, balanced and cooperative flow.",
-    "homeImpact": "People feel more grounded, patient and peaceful. Communication softens naturally.",
-    "usage": "For your chosen intention, this space provides gentle support and stability.",
-    "energy": "harmonious-open"
-  },
-
-  
-  {
     "number": 2,
     "name": "坤",
-    "summary": "A space with soft grounding and supportive stability.",
-    "homeImpact": "People become calmer, slower and more inward. Initiative softens, receptivity increases.",
-    "usage": "For your chosen intention, this space enhances steadiness and emotional safety.",
+    "summary": "A space with soft grounding and receptive stability.",
+    "homeImpact": "People feel calmer, slower and more emotionally open. The environment encourages patience and inward focus.",
+    "usage": "For your chosen intention, this space provides steadiness without push.",
     "energy": "grounded-receptive"
-  },
-  {
-    "number": 23,
-    "name": "剝",
-    "summary": "A space that strips away excess and reveals essentials.",
-    "homeImpact": "People feel more aware of what no longer fits emotionally. Vulnerability increases as clarity forms.",
-    "usage": "For your chosen intention, this space brings underlying truths to the surface.",
-    "energy": "revealing-minimal"
-  },
-  {
-    "number": 8,
-    "name": "比",
-    "summary": "A space with bonding, affinity and gentle cohesion.",
-    "homeImpact": "People feel more cooperative and connected. It softens interpersonal tone.",
-    "usage": "For your chosen intention, this space supports emotional companionship and shared direction.",
-    "energy": "cohesive-relational"
-  },
-  {
-    "number": 20,
-    "name": "觀",
-    "summary": "A space of observation, reflection and perspective.",
-    "homeImpact": "People slow down, observe patterns and become more reflective.",
-    "usage": "For your chosen intention, this space supports evaluation and deeper understanding.",
-    "energy": "reflective-calm"
-  },
-  {
-    "number": 16,
-    "name": "豫",
-    "summary": "A space with uplifted, anticipatory, optimistic tone.",
-    "homeImpact": "People feel lighter and more inspired. Enthusiasm rises gently.",
-    "usage": "For your chosen intention, this space enhances emotional openness and imaginative flow.",
-    "energy": "uplifting-soft"
-  },
-  {
-    "number": 35,
-    "name": "晉",
-    "summary": "A space with warm forward movement and rising visibility.",
-    "homeImpact": "People feel more expressive and confident, though slightly exposed.",
-    "usage": "For your chosen intention, this space promotes visible progress and outward momentum.",
-    "energy": "rising-bright"
-  },
-  {
-    "number": 45,
-    "name": "萃",
-    "summary": "A space that gathers attention, emotion and people.",
-    "homeImpact": "People may feel socially energized or group-oriented. Collective moods become more influential.",
-    "usage": "For your chosen intention, this space enhances emotional resonance and togetherness.",
-    "energy": "gathering-magnetic"
-  },
-  {
-    "number": 12,
-    "name": "否",
-    "summary": "A space marked by stagnation and closed flow.",
-    "homeImpact": "People may feel stuck or muted. Communication slows or becomes indirect.",
-    "usage": "For your chosen intention, this space highlights pauses and blocked momentum.",
-    "energy": "blocked-still"
-  },
-
-
-  {
-    "number": 51,
-    "name": "震",
-    "summary": "A space with sudden activation and emotional stirring.",
-    "homeImpact": "People may feel easily triggered into movement or alertness. Emotions shift quickly.",
-    "usage": "For your chosen intention, this space breaks inertia and encourages change.",
-    "energy": "shocking-initiating"
-  },
-  {
-    "number": 21,
-    "name": "噬嗑",
-    "summary": "A space pushing for resolution and tension-clearing.",
-    "homeImpact": "People confront stuck issues with sharper clarity. It can feel mentally intense.",
-    "usage": "For your chosen intention, this space supports working through obstacles directly.",
-    "energy": "piercing-focused"
-  },
-  {
-    "number": 17,
-    "name": "隨",
-    "summary": "A space that encourages ease and natural alignment.",
-    "homeImpact": "People become more adaptable and responsive. Resistance softens.",
-    "usage": "For your chosen intention, this space supports cooperation and smooth following of circumstances.",
-    "energy": "adaptive-following"
-  },
-  {
-    "number": 25,
-    "name": "无妄",
-    "summary": "A space emphasizing naturalness and unforced action.",
-    "homeImpact": "People feel more authentic and less pressured. False tension dissolves.",
-    "usage": "For your chosen intention, this space supports sincerity and natural effort.",
-    "energy": "authentic-clean"
-  },
-  {
-    "number": 42,
-    "name": "益",
-    "summary": "A space that enhances growth and supportive uplift.",
-    "homeImpact": "People feel generous and motivated. Emotional resources expand.",
-    "usage": "For your chosen intention, this space boosts supportive momentum.",
-    "energy": "expanding-supportive"
   },
   {
     "number": 3,
     "name": "屯",
-    "summary": "A space where beginnings feel uncertain but promising.",
-    "homeImpact": "People may experience confusion or slow starts, but creativity forms gradually.",
-    "usage": "For your chosen intention, this space supports early-stage development.",
+    "summary": "A space of early formation where things feel raw and unsettled.",
+    "homeImpact": "People may feel confusion or slow starts as new ideas form gradually.",
+    "usage": "For your chosen intention, this space supports early-stage development and creative beginnings.",
     "energy": "forming-raw"
   },
   {
-    "number": 27,
-    "name": "頤",
-    "summary": "A space highlighting nourishment and emotional intake.",
-    "homeImpact": "People become more aware of their habits and needs. Regulation becomes visible.",
-    "usage": "For your chosen intention, this space supports mindful pacing and self-maintenance.",
-    "energy": "nourishing-stabilizing"
+    "number": 4,
+    "name": "蒙",
+    "summary": "A space that highlights inexperience but invites learning.",
+    "homeImpact": "People may feel uncertain or hesitant, yet more open to guidance and discovery.",
+    "usage": "For your chosen intention, this space supports exploration and gradual understanding.",
+    "energy": "fresh-unclear"
   },
   {
-    "number": 24,
-    "name": "復",
-    "summary": "A space of returning, resetting and gentle renewal.",
-    "homeImpact": "People revisit patterns or reconnect with emotional roots.",
-    "usage": "For your chosen intention, this space supports restarts and rediscovery.",
-    "energy": "returning-renewal"
-  },
-
-
-  {
-    "number": 57,
-    "name": "巽",
-    "summary": "A space with soft influence and gradual penetration.",
-    "homeImpact": "People become more sensitive to tone and subtlety. Influence grows gently.",
-    "usage": "For your chosen intention, this space supports slow, natural shaping of progress.",
-    "energy": "subtle-flowing"
+    "number": 5,
+    "name": "需",
+    "summary": "A space where timing gathers before movement.",
+    "homeImpact": "People sense pauses or delays before clarity arrives. Patience becomes easier here.",
+    "usage": "For your chosen intention, this space stabilizes timing and supports preparation.",
+    "energy": "reserved-waiting"
   },
   {
-    "number": 37,
-    "name": "家人",
-    "summary": "A space emphasizing relational harmony and shared rhythm.",
-    "homeImpact": "People feel attuned to group dynamics. Emotional expectations become clear.",
-    "usage": "For your chosen intention, this space strengthens unity and relational bonding.",
-    "energy": "harmonizing-relational"
-  },
-  {
-    "number": 53,
-    "name": "漸",
-    "summary": "A space that supports long-term, steady development.",
-    "homeImpact": "People feel calm, committed and steadily improving.",
-    "usage": "For your chosen intention, this space nurtures slow, meaningful growth.",
-    "energy": "gradual-stable"
-  },
-  {
-    "number": 48,
-    "name": "井",
-    "summary": "A space offering deep inner nourishment.",
-    "homeImpact": "People feel supported and emotionally replenished.",
-    "usage": "For your chosen intention, this space strengthens grounding and inner resources.",
-    "energy": "deep-stable"
-  },
-  {
-    "number": 18,
-    "name": "蠱",
-    "summary": "A space that reveals unresolved patterns.",
-    "homeImpact": "People feel drawn to confront lingering issues or emotional residues.",
-    "usage": "For your chosen intention, this space encourages internal recalibration.",
-    "energy": "revealing-reform"
-  },
-  {
-    "number": 46,
-    "name": "升",
-    "summary": "A space with gentle upward progress.",
-    "homeImpact": "People feel quietly empowered and gradually lifted.",
-    "usage": "For your chosen intention, this space supports stable, grounded advancement.",
-    "energy": "uplifting-steady"
-  },
-
-
-  {
-    "number": 29,
-    "name": "坎",
-    "summary": "A space with deep emotional undercurrents.",
-    "homeImpact": "People feel more sensitive, introspective and aware of emotional cycles.",
-    "usage": "For your chosen intention, this space supports emotional honesty and inner work.",
-    "energy": "deep-flowing"
-  },
-  {
-    "number": 60,
-    "name": "節",
-    "summary": "A space that imposes natural boundaries and pacing.",
-    "homeImpact": "People feel more structured and aware of limits.",
-    "usage": "For your chosen intention, this space supports disciplined clarity.",
-    "energy": "regulated-measured"
-  },
-  {
-    "number": 63,
-    "name": "既濟",
-    "summary": "A space in a state of near-completion and delicate balance.",
-    "homeImpact": "People feel accomplished yet cautious, aware that the momentum must be maintained with care.",
-    "usage": "For your chosen intention, this space supports refinement and stabilization rather than major changes.",
-    "energy": "balanced-fine"
-  },
-  {
-    "number": 48,
-    "name": "井",
-    "summary": "A space offering steady nourishment and inner grounding.",
-    "homeImpact": "People feel emotionally replenished and supported. The environment strengthens consistency.",
-    "usage": "For your chosen intention, this space supports internal stability and emotional replenishment.",
-    "energy": "steady-nourishing"
-  },
-  {
-    "number": 39,
-    "name": "蹇",
-    "summary": "A space where progress slows and obstacles become clear.",
-    "homeImpact": "People may feel blocked or hesitant. The environment reveals friction points.",
-    "usage": "For your chosen intention, this space highlights misalignments needing attention.",
-    "energy": "blocked-reflective"
-  },
-  {
-    "number": 8,
-    "name": "比",
-    "summary": "A space that draws people toward unity and connection.",
-    "homeImpact": "Emotions soften and relational closeness increases.",
-    "usage": "For your chosen intention, this space enhances emotional cooperation.",
-    "energy": "cohesive-soft"
+    "number": 6,
+    "name": "訟",
+    "summary": "A space that activates mental tension and opposing views.",
+    "homeImpact": "People may feel argumentative, defensive or sharpened in logic.",
+    "usage": "For your chosen intention, this space brings clarity through friction and contrast.",
+    "energy": "tense-clarifying"
   },
   {
     "number": 7,
     "name": "師",
-    "summary": "A space that strengthens discipline and collective focus.",
-    "homeImpact": "People feel more structured and aware of roles or responsibilities.",
-    "usage": "For your chosen intention, this space supports organized action and strategic direction.",
+    "summary": "A space that reinforces discipline, structure and collective effort.",
+    "homeImpact": "People feel more aware of responsibilities and group roles.",
+    "usage": "For your chosen intention, this space supports organized action and strategic alignment.",
     "energy": "structured-directed"
   },
   {
-    "number": 46,
-    "name": "升",
-    "summary": "A space of gentle, progressive rise.",
-    "homeImpact": "People feel uplifted and increasingly confident over time.",
-    "usage": "For your chosen intention, this space supports stable upward development.",
-    "energy": "gentle-rising"
-  },
-
-
+    "number": 8,
+    "name": "比",
+    "summary": "A space that strengthens unity, bonding and emotional closeness.",
+    "homeImpact": "People feel more connected, cooperative and tuned to relational warmth.",
+    "usage": "For your chosen intention, this space supports shared direction and mutual support.",
+    "energy": "cohesive-relational"
+  }
+]
+[
   {
-    "number": 30,
-    "name": "離",
-    "summary": "A space with bright, revealing and emotionally expressive energy.",
-    "homeImpact": "People become more alert, inspired or emotionally sensitive.",
-    "usage": "For your chosen intention, this space supports insight and clarity.",
-    "energy": "bright-revealing"
-  },
-  {
-    "number": 56,
-    "name": "旅",
-    "summary": "A space with transient, shifting and lightly unsettled energy.",
-    "homeImpact": "People may feel exploratory or restless, as if passing through.",
-    "usage": "For your chosen intention, this space brings fresh perspectives but limited grounding.",
-    "energy": "wandering-light"
+    "number": 9,
+    "name": "小畜",
+    "summary": "A space of gentle containment and slow accumulation.",
+    "homeImpact": "People feel calmer, more patient and less impulsive. The environment supports steady buildup rather than dramatic action.",
+    "usage": "For your chosen intention, this space supports consistency and small, sustainable steps.",
+    "energy": "soft-sustained"
   },
   {
-    "number": 50,
-    "name": "鼎",
-    "summary": "A space that reshapes identity and highlights inner purpose.",
-    "homeImpact": "People feel internal transformation and heightened self-awareness.",
-    "usage": "For your chosen intention, this space supports identity restructuring and emotional refinement.",
-    "energy": "transformative-center"
+    "number": 10,
+    "name": "履",
+    "summary": "A space where careful movement and mindful behavior become important.",
+    "homeImpact": "People feel aware of social dynamics and the need for respectful pacing.",
+    "usage": "For your chosen intention, this space encourages diplomacy and cautious advancement.",
+    "energy": "careful-mindful"
   },
   {
-    "number": 38,
-    "name": "睽",
-    "summary": "A space where contrasts and differences sharpen clarity.",
-    "homeImpact": "People become more aware of boundaries or differing viewpoints.",
-    "usage": "For your chosen intention, this space highlights individuality and independent direction.",
-    "energy": "contrasting-clear"
+    "number": 11,
+    "name": "泰",
+    "summary": "A space of smooth, balanced and peaceful flow.",
+    "homeImpact": "People feel grounded, harmonious and emotionally settled.",
+    "usage": "For your chosen intention, this space promotes gentle progress and stability.",
+    "energy": "harmonious-open"
   },
   {
-    "number": 55,
-    "name": "豐",
-    "summary": "A space with abundant, vibrant and emotionally charged tone.",
-    "homeImpact": "People feel energized, expressive and socially activated.",
-    "usage": "For your chosen intention, this space supports bold emotion and expressive presence.",
-    "energy": "vibrant-full"
-  },
-  {
-    "number": 49,
-    "name": "革",
-    "summary": "A space that encourages emotional renewal and personal shifts.",
-    "homeImpact": "People feel the urge to reset, refresh or change outdated patterns.",
-    "usage": "For your chosen intention, this space strengthens transformation and fresh beginnings.",
-    "energy": "renewing-shift"
+    "number": 12,
+    "name": "否",
+    "summary": "A space with blocked movement and muted emotional flow.",
+    "homeImpact": "People may feel stuck, disconnected or unable to express fully.",
+    "usage": "For your chosen intention, this space highlights stagnation and areas needing patience.",
+    "energy": "blocked-still"
   },
   {
     "number": 13,
     "name": "同人",
-    "summary": "A space promoting openness, shared vision and collaborative clarity.",
-    "homeImpact": "People feel more transparent, cooperative and aligned with others.",
-    "usage": "For your chosen intention, this space enhances teamwork and shared intention.",
+    "summary": "A space that promotes shared vision and transparent connection.",
+    "homeImpact": "People feel more open, communicative and collaborative.",
+    "usage": "For your chosen intention, this space enhances teamwork and collective clarity.",
     "energy": "open-collective"
   },
   {
-    "number": 37,
-    "name": "家人",
-    "summary": "A space centered on relational warmth and shared emotional rhythm.",
-    "homeImpact": "People feel comfort, familiarity and subtle expectations from group patterns.",
-    "usage": "For your chosen intention, this space strengthens emotional bonding and unity.",
-    "energy": "warm-relational"
-  },
-
-
-  {
-    "number": 52,
-    "name": "艮",
-    "summary": "A space with stillness, inward focus and emotional grounding.",
-    "homeImpact": "People feel slowed, introspective and more aware of internal states.",
-    "usage": "For your chosen intention, this space supports grounding and deep inner focus.",
-    "energy": "still-grounded"
+    "number": 14,
+    "name": "大有",
+    "summary": "A space radiating visibility, confidence and strong self-expression.",
+    "homeImpact": "People feel more proud, expressive and willing to take up space.",
+    "usage": "For your chosen intention, this space enhances presence and personal influence.",
+    "energy": "radiant-expansive"
   },
   {
     "number": 15,
     "name": "謙",
-    "summary": "A space promoting balance, humility and emotional moderation.",
-    "homeImpact": "People feel more even-tempered and less reactive.",
-    "usage": "For your chosen intention, this space encourages thoughtful, grounded responses.",
+    "summary": "A space encouraging balance, humility and emotional moderation.",
+    "homeImpact": "People feel more grounded, thoughtful and less reactive.",
+    "usage": "For your chosen intention, this space supports even-tempered responses and thoughtful pacing.",
     "energy": "moderate-balanced"
   },
   {
-    "number": 62,
-    "name": "小過",
-    "summary": "A space emphasizing precision, caution and careful movement.",
-    "homeImpact": "People feel more attentive to details and sensitive to subtle disturbances.",
-    "usage": "For your chosen intention, this space supports careful adjustment and mindful pacing.",
-    "energy": "careful-precise"
+    "number": 16,
+    "name": "豫",
+    "summary": "A space of uplifted anticipation and emotional lightness.",
+    "homeImpact": "People feel inspired, hopeful and more expressive in mood.",
+    "usage": "For your chosen intention, this space supports emotional openness and creative enthusiasm.",
+    "energy": "uplifting-soft"
+  }
+]
+[
+  {
+    "number": 17,
+    "name": "隨",
+    "summary": "A space that supports ease, adaptability and going with the flow.",
+    "homeImpact": "People feel less rigid and more cooperative. The environment softens resistance and encourages natural alignment.",
+    "usage": "For your chosen intention, this space enhances smooth coordination and emotional flexibility.",
+    "energy": "flexible-easy"
+  },
+  {
+    "number": 18,
+    "name": "蠱",
+    "summary": "A space that reveals unresolved patterns and encourages correction.",
+    "homeImpact": "People notice lingering issues or emotional residues. The space highlights what needs repair or renewal.",
+    "usage": "For your chosen intention, this space supports recalibration and clearing old influences.",
+    "energy": "revealing-reform"
+  },
+  {
+    "number": 19,
+    "name": "臨",
+    "summary": "A space of warm, encouraging, forward-reaching energy.",
+    "homeImpact": "People feel more confident taking action or initiating contact.",
+    "usage": "For your chosen intention, this space supports positive approach and leadership energy.",
+    "energy": "approaching-uplift"
+  },
+  {
+    "number": 20,
+    "name": "觀",
+    "summary": "A space of observation, reflection and perspective-taking.",
+    "homeImpact": "People feel more introspective, calm and aware of patterns.",
+    "usage": "For your chosen intention, this space deepens insight and clarity.",
+    "energy": "reflective-calm"
+  },
+  {
+    "number": 21,
+    "name": "噬嗑",
+    "summary": "A space that pushes for resolution through tension-clearing.",
+    "homeImpact": "People feel driven to confront obstacles or clarify misunderstandings.",
+    "usage": "For your chosen intention, this space supports decisive processing and clearing stuck points.",
+    "energy": "piercing-focused"
+  },
+  {
+    "number": 22,
+    "name": "賁",
+    "summary": "A space that emphasizes beauty, refinement and emotional presentation.",
+    "homeImpact": "People feel more expressive, graceful and aware of aesthetic tone.",
+    "usage": "For your chosen intention, this space supports creative expression and emotional softening.",
+    "energy": "refined-bright"
+  },
+  {
+    "number": 23,
+    "name": "剝",
+    "summary": "A space that strips away excess and exposes essentials.",
+    "homeImpact": "People feel more aware of what no longer fits or needs release.",
+    "usage": "For your chosen intention, this space supports clarity through removal.",
+    "energy": "revealing-minimal"
+  },
+  {
+    "number": 24,
+    "name": "復",
+    "summary": "A space of reset, return and emotional renewal.",
+    "homeImpact": "People feel drawn back to something foundational—rest, clarity or emotional truth.",
+    "usage": "For your chosen intention, this space supports restarting with fresh grounding.",
+    "energy": "returning-renewal"
+  }
+]
+[
+  {
+    "number": 25,
+    "name": "無妄",
+    "summary": "A space that supports naturalness, sincerity and unforced action.",
+    "homeImpact": "People feel more authentic and less pressured to perform. The environment reduces artificial tension.",
+    "usage": "For your chosen intention, this space encourages genuine expression and honest movement.",
+    "energy": "authentic-clean"
+  },
+  {
+    "number": 26,
+    "name": "大畜",
+    "summary": "A space of restrained strength and controlled growth.",
+    "homeImpact": "People feel disciplined, steady and capable of long-term buildup.",
+    "usage": "For your chosen intention, this space supports endurance, patience and quiet power.",
+    "energy": "contained-power"
+  },
+  {
+    "number": 27,
+    "name": "頤",
+    "summary": "A space centered on nourishment, habits and emotional intake.",
+    "homeImpact": "People become more aware of what they absorb—emotionally or mentally.",
+    "usage": "For your chosen intention, this space supports mindful restoration and steady self-care.",
+    "energy": "nourishing-stabilizing"
+  },
+  {
+    "number": 28,
+    "name": "大過",
+    "summary": "A space with heightened emotional load and sensitivity.",
+    "homeImpact": "People may feel easily overwhelmed or intensely aware of inner states.",
+    "usage": "For your chosen intention, this space amplifies emotional themes and brings deep patterns to the surface.",
+    "energy": "intense-overflow"
+  },
+  {
+    "number": 29,
+    "name": "坎",
+    "summary": "A space with deep emotional undercurrents and introspection.",
+    "homeImpact": "People sense inner depth, cyclical feelings and hidden emotional rhythms.",
+    "usage": "For your chosen intention, this space supports emotional honesty and inner exploration.",
+    "energy": "deep-flowing"
+  },
+  {
+    "number": 30,
+    "name": "離",
+    "summary": "A bright, expressive and revealing space.",
+    "homeImpact": "People feel more alert, sensitive and expressive. Emotions show more clearly.",
+    "usage": "For your chosen intention, this space supports insight, clarity and creative illumination.",
+    "energy": "bright-revealing"
   },
   {
     "number": 31,
     "name": "咸",
     "summary": "A space that heightens emotional resonance and attraction.",
-    "homeImpact": "People feel more responsive and attuned to interpersonal cues.",
-    "usage": "For your chosen intention, this space enhances emotional attunement and intuitive sensitivity.",
+    "homeImpact": "People become more receptive and responsive to subtle interpersonal cues.",
+    "usage": "For your chosen intention, this space enhances connection and intuitive sensitivity.",
     "energy": "sensitive-attracting"
   },
   {
+    "number": 32,
+    "name": "恆",
+    "summary": "A space of consistency, rhythm and long-term stability.",
+    "homeImpact": "People feel more committed, steady and aligned with enduring patterns.",
+    "usage": "For your chosen intention, this space supports persistence and emotional continuity.",
+    "energy": "steady-consistent"
+  }
+]
+[
+  {
     "number": 33,
     "name": "遯",
-    "summary": "A space encouraging retreat, privacy and selective withdrawal.",
-    "homeImpact": "People may feel the urge to step back, protect boundaries or limit exposure.",
-    "usage": "For your chosen intention, this space supports reflection and emotional decompression.",
+    "summary": "A space encouraging retreat, privacy and strategic withdrawal.",
+    "homeImpact": "People feel the need to step back, conserve energy or protect boundaries.",
+    "usage": "For your chosen intention, this space supports reflection, decompression and emotional space.",
     "energy": "withdrawing-protective"
   },
-
-
   {
-    "number": 58,
-    "name": "兌",
-    "summary": "A space with open, expressive and emotionally releasing energy.",
-    "homeImpact": "People feel more talkative, relaxed and willing to express their feelings.",
-    "usage": "For your chosen intention, this space supports communication and emotional flow.",
-    "energy": "open-expressive"
+    "number": 34,
+    "name": "大壯",
+    "summary": "A space of strong forward momentum and assertive energy.",
+    "homeImpact": "People feel more driven, confident and action-oriented.",
+    "usage": "For your chosen intention, this space boosts initiative and bold expression.",
+    "energy": "strong-forceful"
+  },
+  {
+    "number": 35,
+    "name": "晉",
+    "summary": "A space with warm rising movement and growing visibility.",
+    "homeImpact": "People feel recognized, expressive and supported by upward flow.",
+    "usage": "For your chosen intention, this space enhances progress and outward development.",
+    "energy": "rising-bright"
+  },
+  {
+    "number": 36,
+    "name": "明夷",
+    "summary": "A space where brightness is masked and inner light turns inward.",
+    "homeImpact": "People may feel the need to protect their ideas or emotions. Expression softens.",
+    "usage": "For your chosen intention, this space supports subtlety, inner clarity and quiet strength.",
+    "energy": "hidden-soft"
+  },
+  {
+    "number": 37",
+    "name": "家人",
+    "summary": "A space centered on relational warmth, roles and shared dynamics.",
+    "homeImpact": "People attune to group expectations, emotional patterns and family-like rhythms.",
+    "usage": "For your chosen intention, this space strengthens bonds and cooperative flow.",
+    "energy": "warm-relational"
+  },
+  {
+    "number": 38,
+    "name": "睽",
+    "summary": "A space where contrasts highlight individuality and difference.",
+    "homeImpact": "People become more aware of separate viewpoints or emotional distance.",
+    "usage": "For your chosen intention, this space supports clarity through contrast.",
+    "energy": "contrasting-clear"
+  },
+  {
+    "number": 39,
+    "name": "蹇",
+    "summary": "A space where progress slows and emotional obstacles surface.",
+    "homeImpact": "People may feel stuck or hesitant, sensing resistance in the flow.",
+    "usage": "For your chosen intention, this space reveals friction points and invites reevaluation.",
+    "energy": "blocked-reflective"
+  },
+  {
+    "number": 40,
+    "name": "解",
+    "summary": "A space that encourages release, relief and emotional unburdening.",
+    "homeImpact": "People feel lighter as tension dissipates and solutions become clearer.",
+    "usage": "For your chosen intention, this space supports softening, resolution and emotional ease.",
+    "energy": "relieving-soft"
+  }
+]
+[
+  {
+    "number": 41,
+    "name": "損",
+    "summary": "A space that simplifies, reduces excess and narrows focus.",
+    "homeImpact": "People feel quieter, more selective and aware of what truly matters.",
+    "usage": "For your chosen intention, this space supports clarity through reduction and mindful prioritizing.",
+    "energy": "minimal-focused"
+  },
+  {
+    "number": 42,
+    "name": "益",
+    "summary": "A space that uplifts, expands and supports growth.",
+    "homeImpact": "People feel motivated, generous and optimistic. Energy moves upward with ease.",
+    "usage": "For your chosen intention, this space supports expansion and supportive momentum.",
+    "energy": "expanding-supportive"
+  },
+  {
+    "number": 43,
+    "name": "夬",
+    "summary": "A space that sharpens boundaries and calls for decisive clarity.",
+    "homeImpact": "People feel more certain, bold and willing to cut through confusion.",
+    "usage": "For your chosen intention, this space supports firm choices and removing distractions.",
+    "energy": "decisive-clear"
+  },
+  {
+    "number": 44,
+    "name": "姤",
+    "summary": "A space highlighting sudden encounters, impulses and strong impressions.",
+    "homeImpact": "People may feel stirred, reactive or drawn to unexpected dynamics.",
+    "usage": "For your chosen intention, this space amplifies initial sparks and emotional impulses.",
+    "energy": "impulsive-sudden"
+  },
+  {
+    "number": 45,
+    "name": "萃",
+    "summary": "A space where people, emotions and intentions gather together.",
+    "homeImpact": "People feel socially activated, collaborative or influenced by group mood.",
+    "usage": "For your chosen intention, this space supports collective resonance and shared momentum.",
+    "energy": "gathering-magnetic"
+  },
+  {
+    "number": 46,
+    "name": "升",
+    "summary": "A space of steady upward movement and grounded progress.",
+    "homeImpact": "People feel uplifted, hopeful and steadily improving.",
+    "usage": "For your chosen intention, this space supports long-term advancement with stability.",
+    "energy": "uplifting-steady"
   },
   {
     "number": 47,
     "name": "困",
-    "summary": "A space where pressure accumulates and emotional heaviness appears.",
-    "homeImpact": "People may feel stuck, drained or inwardly burdened.",
-    "usage": "For your chosen intention, this space surfaces limits and emotional fatigue.",
+    "summary": "A space where pressure and emotional heaviness become visible.",
+    "homeImpact": "People may feel drained, restricted or aware of inner fatigue.",
+    "usage": "For your chosen intention, this space makes limits visible and highlights what needs release.",
     "energy": "pressed-heavy"
   },
   {
-    "number": 28,
-    "name": "大過",
-    "summary": "A space with heightened emotional load and intensity.",
-    "homeImpact": "People feel easily overwhelmed or highly sensitive.",
-    "usage": "For your chosen intention, this space intensifies emotional themes and inner reactions.",
-    "energy": "intense-overflow"
+    "number": 48,
+    "name": "井",
+    "summary": "A space offering deep nourishment, rooted support and emotional replenishment.",
+    "homeImpact": "People feel restored, grounded and emotionally sustained.",
+    "usage": "For your chosen intention, this space supports inner renewal and dependable grounding.",
+    "energy": "deep-stable"
+  }
+]
+[
+  {
+    "number": 49,
+    "name": "革",
+    "summary": "A space that encourages emotional renewal and meaningful change.",
+    "homeImpact": "People feel drawn to shift patterns, reset dynamics or update old habits.",
+    "usage": "For your chosen intention, this space supports transformation and new beginnings.",
+    "energy": "renewing-shift"
   },
   {
-    "number": 41,
-    "name": "損",
-    "summary": "A space that simplifies and narrows emotional focus.",
-    "homeImpact": "People feel quieter, more selective and less distracted.",
-    "usage": "For your chosen intention, this space supports refining priorities and emotional clarity.",
-    "energy": "minimal-focused"
+    "number": 50,
+    "name": "鼎",
+    "summary": "A space focused on identity, purpose and inner refinement.",
+    "homeImpact": "People feel internal reshaping and a sense of personal maturation.",
+    "usage": "For your chosen intention, this space strengthens inner purpose and emotional recalibration.",
+    "energy": "transformative-center"
   },
   {
-    "number": 61,
-    "name": "中孚",
-    "summary": "A space promoting sincerity, emotional truth and inner alignment.",
-    "homeImpact": "People feel more honest and attuned to deeper meaning.",
-    "usage": "For your chosen intention, this space strengthens inner clarity and authenticity.",
-    "energy": "sincere-clear"
+    "number": 51,
+    "name": "震",
+    "summary": "A space of activation, emotional stirring and sudden movement.",
+    "homeImpact": "People feel easily triggered into alertness, action or emotional shifts.",
+    "usage": "For your chosen intention, this space breaks stagnation and encourages forward movement.",
+    "energy": "shocking-initiating"
+  },
+  {
+    "number": 52,
+    "name": "艮",
+    "summary": "A space of stillness, grounding and emotional containment.",
+    "homeImpact": "People feel inward, reflective and slowed down. The environment encourages pause.",
+    "usage": "For your chosen intention, this space supports grounding and inner clarity.",
+    "energy": "still-grounded"
+  },
+  {
+    "number": 53,
+    "name": "漸",
+    "summary": "A space supporting gradual, steady and long-term development.",
+    "homeImpact": "People feel committed, patient and willing to grow step by step.",
+    "usage": "For your chosen intention, this space nurtures slow, meaningful progress.",
+    "energy": "gradual-rooted"
+  },
+  {
+    "number": 54,
+    "name": "歸妹",
+    "summary": "A space highlighting emotional transitions and shifting relational dynamics.",
+    "homeImpact": "People feel tension between desire and uncertainty, or between old roles and new possibilities.",
+    "usage": "For your chosen intention, this space emphasizes emotional reorientation and adjustment.",
+    "energy": "transitional-sensitive"
+  },
+  {
+    "number": 55,
+    "name": "豐",
+    "summary": "A space with abundant, vibrant and expressive emotional tone.",
+    "homeImpact": "People feel energized, full and emotionally activated — sometimes overwhelmingly so.",
+    "usage": "For your chosen intention, this space amplifies expression, visibility and emotional intensity.",
+    "energy": "vibrant-full"
+  },
+  {
+    "number": 56",
+    "name": "旅",
+    "summary": "A space marked by movement, transience and light emotional attachment.",
+    "homeImpact": "People may feel exploratory, unrooted or aware of temporary conditions.",
+    "usage": "For your chosen intention, this space brings fresh perspective but limits grounding.",
+    "energy": "wandering-light"
+  }
+]
+[
+  {
+    "number": 57,
+    "name": "巽",
+    "summary": "A space of gentle influence, subtle shaping and soft penetration.",
+    "homeImpact": "People become more sensitive to tone, nuance and emotional undercurrents. The environment encourages gradual adaptation.",
+    "usage": "For your chosen intention, this space supports slow, natural shaping of progress and gentle emotional influence.",
+    "energy": "subtle-flowing"
+  },
+  {
+    "number": 58,
+    "name": "兌",
+    "summary": "A space of openness, joy and expressive emotional release.",
+    "homeImpact": "People feel lighter, more talkative and more willing to share their feelings. Emotional tension softens.",
+    "usage": "For your chosen intention, this space enhances communication and emotional flow.",
+    "energy": "open-expressive"
+  },
+  {
+    "number": 59,
+    "name": "渙",
+    "summary": "A space that dissolves rigidity and disperses emotional heaviness.",
+    "homeImpact": "People feel relief, softness and a loosening of internal pressure. Boundaries become more fluid.",
+    "usage": "For your chosen intention, this space supports release, emotional diffusion and gentle unwinding.",
+    "energy": "dissolving-soft"
   },
   {
     "number": 60,
     "name": "節",
-    "summary": "A space that shapes rhythm through gentle boundaries and regulated flow.",
-    "homeImpact": "People feel more aware of limits and the need for emotional pacing.",
-    "usage": "For your chosen intention, this space supports balanced movement and moderation.",
+    "summary": "A space that shapes rhythm through boundaries and measured flow.",
+    "homeImpact": "People feel more aware of limits, timing and emotional pacing.",
+    "usage": "For your chosen intention, this space supports structured movement and healthy emotional regulation.",
     "energy": "regulated-soft"
+  },
+  {
+    "number": 61,
+    "name": "中孚",
+    "summary": "A space promoting sincerity, inner truth and emotional alignment.",
+    "homeImpact": "People feel more honest, receptive and connected to deeper meaning.",
+    "usage": "For your chosen intention, this space strengthens authenticity and intuitive clarity.",
+    "energy": "sincere-clear"
+  },
+  {
+    "number": 62,
+    "name": "小過",
+    "summary": "A space that heightens sensitivity to minor details and careful adjustment.",
+    "homeImpact": "People become more cautious, attentive and subtly reactive.",
+    "usage": "For your chosen intention, this space supports precision and mindful refinement.",
+    "energy": "careful-precise"
+  },
+  {
+    "number": 63,
+    "name": "既濟",
+    "summary": "A space in near-completion, balanced but delicate in stability.",
+    "homeImpact": "People feel accomplished yet cautious, aware that stability must be maintained.",
+    "usage": "For your chosen intention, this space supports refinement, consolidation and stabilization.",
+    "energy": "balanced-fine"
+  },
+  {
+    "number": 64,
+    "name": "未濟",
+    "summary": "A space of almost-ready energy where things are forming but not yet settled.",
+    "homeImpact": "People feel anticipation, openness and transitional movement.",
+    "usage": "For your chosen intention, this space supports preparation, adaptability and flexible mindset.",
+    "energy": "forming-transition"
   }
 ]
-
-
