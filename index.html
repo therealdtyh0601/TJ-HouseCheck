@@ -2,148 +2,403 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Lumi Terra · Home Influence Reading</title>
+  <title>Lumi Terra · Terra-Domus Relationship Edition</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+  <!-- Your Terra-Domus styling -->
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet" />
 </head>
 
-<body>
-  <!-- ===== HEADER ===== -->
-  <header class="header">
-    <h1 class="title">Lumi Terra</h1>
-    <p class="subtitle">
-      Understand how your space influences your emotional and energetic flow.
+<body class="terra-body">
+  <!-- ========= HEADER ========= -->
+  <header class="td-header">
+    <h1 class="td-title">Terra-Domus · Lumi Terra</h1>
+    <p class="td-subtitle">
+      See how each room’s direction shapes you, your family members, and your relationships at home.
     </p>
   </header>
 
-  <!-- ===== MAIN TOOL ===== -->
-  <main class="tool">
+  <main class="td-main">
 
-    <div class="input-row">
-      <label for="directionSelect">Room Direction</label>
-      <select id="directionSelect">
-        <option value="N">North</option>
-        <option value="NE">Northeast</option>
-        <option value="E">East</option>
-        <option value="SE">Southeast</option>
-        <option value="S">South</option>
-        <option value="SW">Southwest</option>
-        <option value="W">West</option>
-        <option value="NW">Northwest</option>
-      </select>
-    </div>
+    <!-- ========= STEP 1: INTENTION / GLOBAL SETTINGS ========= -->
+    <section class="td-card td-step">
+      <div class="td-step-label">STEP 1</div>
+      <h2 class="td-section-title">Intention & Settings</h2>
 
-    <div class="input-row">
-      <label for="simSelect">Your Intention</label>
-      <select id="simSelect">
-        <option value="general">General</option>
-        <option value="clarity">Clarity</option>
-        <option value="grounding">Grounding</option>
-        <option value="persona">Persona</option>
-      </select>
-    </div>
+      <div class="td-grid-2">
+        <div class="td-field">
+          <label for="simSelect">Your main focus</label>
+          <select id="simSelect">
+            <option value="general">General wellbeing</option>
+            <option value="clarity">Clarity & focus</option>
+            <option value="grounding">Grounding & stability</option>
+            <option value="persona">Mood & persona</option>
+          </select>
+        </div>
 
-    <div class="input-row">
-      <label for="roomIndex">Room variation (optional)</label>
-      <input id="roomIndex" type="number" placeholder="0" min="0" />
-    </div>
+        <div class="td-field">
+          <label for="roomIndex">Variation seed (optional)</label>
+          <input id="roomIndex" type="number" min="0" placeholder="0" />
+          <p class="td-help">
+            Use this if you want slightly different patterns for homes with similar layouts.
+          </p>
+        </div>
+      </div>
 
-    <div class="input-row">
-      <label>Background Music</label>
-      <button id="bgmToggle" class="btn-secondary">Play / Pause</button>
-    </div>
+      <div class="td-field td-bgm-field">
+        <label>Background music</label>
+        <button id="bgmToggle" class="td-btn-secondary">Play / Pause Ambient</button>
+      </div>
 
-    <button id="analyseBtn" class="btn-primary">Analyse My Home</button>
+      <div class="td-helper-card">
+        <div class="td-helper-title">📌 How to find a room's direction</div>
+        <ol class="td-helper-list">
+          <li>Stand inside the room, facing the main window or opening.</li>
+          <li>Open the compass app on your phone.</li>
+          <li>Note the direction you are facing (N / NE / E / SE / S / SW / W / NW).</li>
+          <li>Tap the same direction on the compass below when adding the room.</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ========= STEP 2: ROOMS & SPACES ========= -->
+    <section class="td-card td-step">
+      <div class="td-step-label">STEP 2</div>
+      <h2 class="td-section-title">Rooms & Family Members</h2>
+
+      <!-- Add Room Form -->
+      <div class="td-room-form">
+
+        <div class="td-grid-2">
+          <div class="td-field">
+            <label for="roomName">Room name / type</label>
+            <input id="roomName" type="text" placeholder="Example: Master Bedroom" />
+          </div>
+
+          <div class="td-field">
+            <label for="roomFloor">Floor</label>
+            <input id="roomFloor" type="number" min="0" placeholder="0" />
+          </div>
+        </div>
+
+        <div class="td-grid-2">
+          <div class="td-field">
+            <label for="roomUser">Who mainly uses this room?</label>
+            <input id="roomUser" type="text" placeholder="Example: You, partner, eldest child" />
+          </div>
+
+          <div class="td-field">
+            <label for="roleSelect">Role of this person</label>
+            <select id="roleSelect">
+              <option value="you">You (main user)</option>
+              <option value="partner">Partner / spouse</option>
+              <option value="child">Child / teen</option>
+              <option value="parent">Parent</option>
+              <option value="elder">Elder / grandparent</option>
+              <option value="other">Other family member</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="td-field td-inline-field">
+          <input type="checkbox" id="sharedCheckbox" />
+          <label for="sharedCheckbox">You also use this room regularly</label>
+        </div>
+
+        <!-- Compass UI -->
+        <div class="td-field">
+          <label>Room direction</label>
+          <div class="td-compass">
+            <button class="td-compass-btn" data-dir="N">N</button>
+            <button class="td-compass-btn" data-dir="NE">NE</button>
+            <button class="td-compass-btn" data-dir="E">E</button>
+            <button class="td-compass-btn" data-dir="SE">SE</button>
+            <button class="td-compass-btn" data-dir="S">S</button>
+            <button class="td-compass-btn" data-dir="SW">SW</button>
+            <button class="td-compass-btn" data-dir="W">W</button>
+            <button class="td-compass-btn" data-dir="NW">NW</button>
+          </div>
+          <p class="td-help">
+            Tap one direction. This is the main facing direction of the room.
+          </p>
+          <input type="hidden" id="roomDirection" />
+        </div>
+
+        <button id="addRoomBtn" class="td-btn-primary">+ Add room</button>
+      </div>
+    </section>
+
+    <!-- ========= STEP 3: SUMMARY & TABLE ========= -->
+    <section class="td-card td-step">
+      <div class="td-step-label">STEP 3</div>
+      <h2 class="td-section-title">Home Overview</h2>
+
+      <div class="td-summary-top">
+        <div class="td-summary-box">
+          <h3>• Quick overview</h3>
+          <p id="summaryOverview">
+            Start adding rooms to see how different directions are shaping you and your family.
+          </p>
+        </div>
+
+        <div class="td-summary-box">
+          <h3>How to read this</h3>
+          <p>
+            Each row shows how a room's direction may affect the main person using it,
+            and how it may influence the relationship between you and them.
+            These are patterns, not fixed predictions.
+          </p>
+        </div>
+      </div>
+
+      <div class="td-table-wrapper">
+        <h3 class="td-table-title">Room readings</h3>
+        <table class="td-table">
+          <thead>
+            <tr>
+              <th>Room</th>
+              <th>Dir</th>
+              <th>Role</th>
+              <th>Hexagram</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="roomsTableBody">
+            <tr class="td-empty-row">
+              <td colspan="5">No rooms added yet.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
   </main>
 
-  <!-- ===== RESULT MODAL (CENTER) ===== -->
-  <div id="readingModal" class="modal">
-    <div class="modal-content">
-      <button class="modal-close" id="modalCloseBtn">✕</button>
+  <!-- ========= FOOTER CTA ========= -->
+  <footer class="td-footer">
+    <p>© Lumi Studio — Terra-Domus Free Edition</p>
+    <p>
+      For full Terra · Celestial · Persona readings: 
+      <a href="https://instagram.com/lumistudio2025" target="_blank">@lumistudio2025</a>
+    </p>
+  </footer>
+
+  <!-- ========= READING MODAL ========= -->
+  <div id="readingModal" class="td-modal">
+    <div class="td-modal-content">
+      <button class="td-modal-close" id="modalCloseBtn">✕</button>
 
       <h2 id="reading-title"></h2>
 
-      <p><strong>Summary:</strong>
+      <p><strong>Hexagram summary:</strong>
         <span id="reading-summary"></span>
       </p>
 
-      <p><strong>Effect on You:</strong>
-        <span id="reading-impact"></span>
+      <p><strong>Effect on this person:</strong>
+        <span id="reading-person"></span>
       </p>
 
-      <p><strong>Usage:</strong>
+      <p><strong>Effect on your relationship:</strong>
+        <span id="reading-relationship"></span>
+      </p>
+
+      <p><strong>Space usage tone:</strong>
         <span id="reading-usage"></span>
       </p>
 
-      <p><strong>Energy Tone:</strong>
+      <p><strong>Energy tone:</strong>
         <span id="reading-energy"></span>
       </p>
 
-      <p><strong>Your Intention:</strong>
+      <p><strong>Your chosen intention:</strong>
         <span id="reading-sim"></span>
       </p>
     </div>
   </div>
 
-  <!-- ===== CTA ===== -->
-  <section class="cta">
-    <h3>✨ Lumi Studio · Free Terra Reading</h3>
-    <p>
-      This is a basic spatial reading showing how your environment may
-      influence your emotional and behavioural tone.
-    </p>
-    <p>For a complete personalised reading, contact us on Instagram:</p>
-    <a class="cta-btn" href="https://instagram.com/lumistudio2025" target="_blank">
-      ➜ IG @lumistudio2025
-    </a>
-    <p class="cta-small">
-      Full Terra · Celestial · Persona readings available for patrons & clients.
-    </p>
-  </section>
-
-  <!-- ===== SCRIPTS ===== -->
+  <!-- ========= JS: engine + bgm + UI logic ========= -->
   <script src="assets/js/engine.js"></script>
   <script src="assets/js/bgm.js"></script>
   <script>
-    // ---- UI ↔ Engine wiring (no extra JS file needed) ----
-    const analyseBtn = document.getElementById("analyseBtn");
+    // ---------------- COMPASS UI ----------------
+    const compassButtons = document.querySelectorAll(".td-compass-btn");
+    const roomDirectionInput = document.getElementById("roomDirection");
+
+    compassButtons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        compassButtons.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        roomDirectionInput.value = btn.dataset.dir;
+      });
+    });
+
+    // ---------------- ROOMS & ENGINE ----------------
+    const roomsTableBody = document.getElementById("roomsTableBody");
+    const addRoomBtn = document.getElementById("addRoomBtn");
+    const simSelect = document.getElementById("simSelect");
+    const roomIndexSeed = document.getElementById("roomIndex");
+
     const modal = document.getElementById("readingModal");
     const modalCloseBtn = document.getElementById("modalCloseBtn");
 
-    analyseBtn.addEventListener("click", async () => {
-      const direction = document.getElementById("directionSelect").value;
-      const simMode = document.getElementById("simSelect").value || "general";
-      const roomIndex = Number(document.getElementById("roomIndex").value) || 0;
+    const rooms = []; // { id, name, floor, user, role, dir, sharedWithUser, reading }
 
-      const reading = await TerraEngine.getReading(direction, simMode, roomIndex);
+    function updateOverview() {
+      if (!rooms.length) {
+        document.getElementById("summaryOverview").innerText =
+          "Start adding rooms to see how different directions are shaping you and your family.";
+        return;
+      }
+
+      const dirCount = {};
+      rooms.forEach(r => {
+        dirCount[r.dir] = (dirCount[r.dir] || 0) + 1;
+      });
+
+      const parts = Object.entries(dirCount).map(([dir, count]) =>
+        `${count}× ${dir}`
+      );
+
+      document.getElementById("summaryOverview").innerText =
+        "You currently have rooms distributed in these directions: " + parts.join(", ") + ".";
+    }
+
+    function renderRooms() {
+      roomsTableBody.innerHTML = "";
+
+      if (!rooms.length) {
+        roomsTableBody.innerHTML =
+          '<tr class="td-empty-row"><td colspan="5">No rooms added yet.</td></tr>';
+        return;
+      }
+
+      rooms.forEach(room => {
+        const tr = document.createElement("tr");
+
+        tr.innerHTML = `
+          <td>${room.name || "—"}</td>
+          <td>${room.dir}</td>
+          <td>${room.roleLabel}</td>
+          <td>${room.reading.number} · ${room.reading.name}</td>
+          <td class="td-actions">
+            <button class="td-btn-small" data-id="${room.id}" data-action="view">View</button>
+            <button class="td-btn-small td-btn-ghost" data-id="${room.id}" data-action="remove">×</button>
+          </td>
+        `;
+
+        roomsTableBody.appendChild(tr);
+      });
+
+      updateOverview();
+    }
+
+    function mapRoleLabel(role) {
+      switch ((role || "").toLowerCase()) {
+        case "partner": return "Partner";
+        case "child": return "Child";
+        case "parent": return "Parent";
+        case "elder": return "Elder";
+        case "other": return "Other";
+        case "you":
+        default: return "You";
+      }
+    }
+
+    async function addRoom() {
+      const name = document.getElementById("roomName").value.trim();
+      const floor = document.getElementById("roomFloor").value;
+      const user = document.getElementById("roomUser").value.trim();
+      const role = document.getElementById("roleSelect").value;
+      const sharedWithUser = document.getElementById("sharedCheckbox").checked;
+      const dir = roomDirectionInput.value;
+
+      if (!dir) {
+        alert("Please choose a direction for this room using the compass.");
+        return;
+      }
+
+      const simMode = simSelect.value || "general";
+      const baseSeed = Number(roomIndexSeed.value) || 0;
+      const roomSeed = baseSeed + rooms.length; // stable but varied
+
+      const reading = await TerraEngine.getRoomReading({
+        direction: dir,
+        simMode,
+        roomSeed,
+        role,
+        sharedWithUser
+      });
 
       if (!reading || reading.error) {
         alert("Unable to generate reading. Please try again.");
         return;
       }
 
-      document.getElementById("reading-title").innerText =
-        `${reading.number} ｜ ${reading.name}`;
+      const room = {
+        id: Date.now().toString() + Math.random().toString(16).slice(2),
+        name,
+        floor: floor === "" ? null : Number(floor),
+        user,
+        role,
+        roleLabel: mapRoleLabel(role),
+        dir,
+        sharedWithUser,
+        reading
+      };
 
-      document.getElementById("reading-summary").innerText = reading.summary;
-      document.getElementById("reading-impact").innerText = reading.homeImpact;
-      document.getElementById("reading-usage").innerText = reading.usage;
-      document.getElementById("reading-energy").innerText = reading.energy;
-      document.getElementById("reading-sim").innerText = reading.simTag;
+      rooms.push(room);
+      renderRooms();
 
-      modal.classList.add("show");
+      // reset fields but keep seed & SIM
+      document.getElementById("roomName").value = "";
+      document.getElementById("roomFloor").value = "";
+      document.getElementById("roomUser").value = "";
+      document.getElementById("sharedCheckbox").checked = false;
+      // keep compass selection so user can add similar direction rooms quickly
+    }
+
+    addRoomBtn.addEventListener("click", addRoom);
+
+    // delegate table actions
+    roomsTableBody.addEventListener("click", (e) => {
+      const btn = e.target.closest("button");
+      if (!btn) return;
+      const id = btn.dataset.id;
+      const action = btn.dataset.action;
+      const idx = rooms.findIndex(r => r.id === id);
+      if (idx === -1) return;
+
+      if (action === "view") {
+        const room = rooms[idx];
+        const r = room.reading;
+
+        const titleSuffix = room.name
+          ? ` — ${room.name}`
+          : ` — ${room.roleLabel}'s room`;
+
+        document.getElementById("reading-title").innerText =
+          `${r.number} ｜ ${r.name}${titleSuffix}`;
+
+        document.getElementById("reading-summary").innerText = r.summary;
+        document.getElementById("reading-person").innerText = r.personEffect;
+        document.getElementById("reading-relationship").innerText = r.relationshipEffect;
+        document.getElementById("reading-usage").innerText = r.usage;
+        document.getElementById("reading-energy").innerText = r.energy;
+        document.getElementById("reading-sim").innerText = r.simTag;
+
+        modal.classList.add("td-show");
+      } else if (action === "remove") {
+        rooms.splice(idx, 1);
+        renderRooms();
+      }
     });
 
-    modalCloseBtn.addEventListener("click", () => {
-      modal.classList.remove("show");
-    });
-
-    // click outside to close
+    // modal close behaviour
+    modalCloseBtn.addEventListener("click", () => modal.classList.remove("td-show"));
     modal.addEventListener("click", (e) => {
-      if (e.target === modal) modal.classList.remove("show");
+      if (e.target === modal) modal.classList.remove("td-show");
     });
   </script>
 </body>
