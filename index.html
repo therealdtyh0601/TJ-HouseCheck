@@ -2,612 +2,329 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Lumi Terra · Terra-Domus Direction Reading</title>
+  <title>Lumi Terra · Terra-Domus</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- External CSS if you already have one -->
+  <!-- Optional shared CSS -->
   <link rel="stylesheet" href="assets/css/style.css" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet" />
 
-  <!-- Lumi Deep Blue Layout Styles -->
   <style>
     :root {
-      --bg-deep: #0A1D40;
-      --card-surface: rgba(255, 255, 255, 0.06);
-      --card-border: rgba(255, 255, 255, 0.16);
-      --text-main: #EAF1FF;
-      --text-sub: #9FB3D9;
+      --bg: #0A1D40;
+      --card: rgba(255,255,255,0.06);
+      --border: rgba(255,255,255,0.14);
+      --text: #EAF1FF;
+      --sub: #9FB3D9;
       --accent: #AFC6FF;
-      --accent-strong: #ffffff;
-      --danger: #ff6565;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
-    body.terra-body {
+    body {
       margin: 0;
-      padding: 0;
-      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      background: radial-gradient(circle at top, #122a63 0, var(--bg-deep) 45%, #040918 100%);
-      color: var(--text-main);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: radial-gradient(circle at top, #122a63 0, var(--bg) 45%, #040918 100%);
+      color: var(--text);
       min-height: 100vh;
     }
 
-    .td-header {
-      padding: 20px 20px 10px;
+    header {
       text-align: center;
+      padding: 20px 16px 10px;
     }
 
-    .td-title {
+    header h1 {
       margin: 0;
-      font-size: 1.6rem;
-      letter-spacing: 0.06em;
+      font-size: 1.5rem;
+      letter-spacing: .06em;
       text-transform: uppercase;
-      color: var(--accent-strong);
     }
 
-    .td-subtitle {
+    header p {
       margin: 6px 0 0;
-      font-size: 0.9rem;
-      color: var(--text-sub);
+      font-size: .9rem;
+      color: var(--sub);
     }
 
-    .td-main {
+    main {
       max-width: 1100px;
-      margin: 0 auto;
-      padding: 10px 16px 30px;
+      margin: auto;
+      padding: 10px 16px 24px;
     }
 
-    .td-layout {
+    .layout {
       display: flex;
-      flex-wrap: wrap;
       gap: 16px;
+      flex-wrap: wrap;
     }
 
-    .td-left, .td-right {
+    .panel {
       flex: 1 1 320px;
-      min-width: 300px;
-    }
-
-    .td-card {
-      background: var(--card-surface);
+      background: var(--card);
+      border: 1px solid var(--border);
       border-radius: 18px;
-      border: 1px solid var(--card-border);
-      padding: 16px 18px 18px;
-      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.55);
+      padding: 16px;
       backdrop-filter: blur(10px);
+      box-shadow: 0 18px 40px rgba(0,0,0,.45);
     }
 
-    .td-section-title {
+    h2 {
       margin: 0 0 12px;
       font-size: 1.05rem;
       color: var(--accent);
-      letter-spacing: 0.04em;
       text-transform: uppercase;
+      letter-spacing: .04em;
     }
 
-    .td-field {
-      margin-bottom: 10px;
-    }
-
-    .td-field label {
+    label {
       display: block;
-      font-size: 0.8rem;
-      color: var(--text-sub);
-      margin-bottom: 4px;
+      font-size: .8rem;
+      color: var(--sub);
+      margin: 10px 0 4px;
     }
 
-    select, input[type="text"], input[type="number"] {
+    select, input[type="checkbox"] {
       width: 100%;
       padding: 8px 10px;
       border-radius: 10px;
-      border: 1px solid var(--card-border);
-      background: rgba(3, 8, 30, 0.9);
-      color: var(--text-main);
-      font-size: 0.9rem;
+      background: rgba(3,8,30,.9);
+      color: var(--text);
+      border: 1px solid var(--border);
     }
 
-    select:focus, input:focus {
-      outline: none;
-      border-color: var(--accent);
-    }
-
-    .td-inline-field {
+    .inline {
       display: flex;
       align-items: center;
       gap: 8px;
-      font-size: 0.85rem;
-      color: var(--text-sub);
+      margin-top: 8px;
+      font-size: .85rem;
+      color: var(--sub);
     }
 
-    .td-inline-field input[type="checkbox"] {
-      width: auto;
-    }
-
-    .td-compass-wrapper {
-      margin-top: 6px;
-    }
-
-    .td-compass-selected {
-      font-size: 0.85rem;
+    .compass-selected {
+      font-size: .85rem;
       color: var(--accent);
       margin-bottom: 6px;
       min-height: 1.2em;
     }
 
-    .td-compass-grid {
+    .compass {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3,1fr);
       gap: 4px;
     }
 
-    .td-compass-btn {
-      border-radius: 10px;
-      border: 1px solid var(--card-border);
-      background: rgba(5, 12, 35, 0.9);
-      color: var(--text-sub);
-      font-size: 0.85rem;
+    .compass button {
       padding: 10px 0;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: rgba(5,12,35,.9);
+      color: var(--sub);
       cursor: pointer;
-      transition: 0.18s ease;
     }
 
-    .td-compass-btn.center {
+    .compass button.active {
+      background: linear-gradient(135deg, rgba(175,198,255,.35), rgba(10,29,64,.95));
+      color: #fff;
+      border-color: #fff;
+      box-shadow: 0 0 10px rgba(175,198,255,.6);
+    }
+
+    .compass .center {
       cursor: default;
-      opacity: 0.45;
-      font-size: 0.7rem;
+      opacity: .4;
+      font-size: .7rem;
     }
 
-    .td-compass-btn:not(.center):hover {
-      border-color: var(--accent);
-      color: var(--accent-strong);
+    .help {
+      font-size: .75rem;
+      color: var(--sub);
+      margin-top: 6px;
     }
 
-    .td-compass-btn.active {
-      border-color: var(--accent-strong);
-      background: linear-gradient(135deg, rgba(175, 198, 255, 0.35), rgba(10, 29, 64, 0.95));
-      color: var(--accent-strong);
-      box-shadow: 0 0 12px rgba(175, 198, 255, 0.65);
-    }
-
-    .td-help {
-      font-size: 0.75rem;
-      color: var(--text-sub);
-      margin: 6px 0 0;
-    }
-
-    .td-btn-primary, .td-btn-secondary {
+    .btn {
+      margin-top: 12px;
       width: 100%;
-      padding: 9px 10px;
+      padding: 10px;
       border-radius: 12px;
       border: none;
-      cursor: pointer;
       font-weight: 600;
-      font-size: 0.9rem;
-      margin-top: 10px;
-      transition: 0.18s ease;
-    }
-
-    .td-btn-primary {
+      cursor: pointer;
       background: var(--accent);
       color: #040918;
     }
 
-    .td-btn-primary:hover {
-      background: var(--accent-strong);
-    }
-
-    .td-btn-secondary {
-      background: transparent;
-      color: var(--text-main);
-      border: 1px solid var(--card-border);
-    }
-
-    .td-btn-secondary:hover {
-      border-color: var(--accent);
-    }
-
-    .td-right-title {
-      margin: 0 0 12px;
-      font-size: 1.05rem;
-      color: var(--accent);
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-    }
-
-    .td-result-empty {
-      font-size: 0.9rem;
-      color: var(--text-sub);
+    .empty {
       text-align: center;
-      padding: 30px 10px;
+      color: var(--sub);
+      padding: 28px 10px;
+      font-size: .9rem;
     }
 
-    .hidden {
-      display: none !important;
-    }
-
-    .td-result-header h2 {
-      margin: 0;
-      font-size: 1.1rem;
-      color: var(--accent-strong);
-    }
-
-    .td-result-header p {
-      margin: 4px 0 0;
-      font-size: 0.8rem;
-      color: var(--text-sub);
-    }
-
-    .td-result-section {
+    .result-section {
       margin-top: 10px;
-      font-size: 0.86rem;
+      font-size: .86rem;
     }
 
-    .td-result-section strong {
+    .result-section strong {
       color: var(--accent);
     }
 
-    .td-result-section p {
-      margin: 3px 0 8px;
-      line-height: 1.4;
-    }
-
-    .td-helper {
-      margin-top: 18px;
-    }
-
-    .td-helper-card {
-      background: rgba(255, 255, 255, 0.04);
-      border-radius: 14px;
-      border: 1px dashed rgba(175, 198, 255, 0.4);
-      padding: 10px 12px;
-      font-size: 0.8rem;
-      color: var(--text-sub);
-    }
-
-    .td-helper-card strong {
-      color: var(--accent);
-    }
-
-    .td-footer {
+    footer {
+      border-top: 1px solid rgba(255,255,255,.12);
       text-align: center;
-      padding: 10px 10px 18px;
-      font-size: 0.8rem;
-      color: var(--text-sub);
-      border-top: 1px solid rgba(255, 255, 255, 0.12);
-      margin-top: 6px;
+      padding: 14px 10px 18px;
+      font-size: .8rem;
+      color: var(--sub);
     }
 
-    .td-footer a {
+    footer a {
       color: var(--accent);
       text-decoration: none;
       font-weight: 500;
     }
-
-    .td-footer a:hover {
-      color: var(--accent-strong);
-    }
-
-    @media (max-width: 768px) {
-      .td-main {
-        padding: 8px 12px 20px;
-      }
-    }
   </style>
 </head>
 
-<body class="terra-body">
-  <!-- ========= HEADER ========= -->
-  <header class="td-header">
-    <h1 class="td-title">Lumi Terra · Terra-Domus</h1>
-    <p class="td-subtitle">
-      Direction-based reading on how a room’s orientation may influence you, your family member, and your bond.
-    </p>
-  </header>
+<body>
 
-  <!-- ========= MAIN ========= -->
-  <main class="td-main">
-    <section class="td-layout">
+<header>
+  <h1>Lumi Terra · Terra-Domus</h1>
+  <p>Direction-based insight on how a space may influence a family member and your relationship.</p>
+</header>
 
-      <!-- ===== LEFT: INPUT PANEL ===== -->
-      <div class="td-left">
-        <div class="td-card">
-          <h2 class="td-section-title">Room & Person</h2>
+<main>
+  <section class="layout">
 
-          <!-- Room Type -->
-          <div class="td-field">
-            <label for="roomType">Room type</label>
-            <select id="roomType">
-              <option value="master_bedroom">Master Bedroom</option>
-              <option value="bedroom">Bedroom</option>
-              <option value="living_room">Living Room</option>
-              <option value="kitchen">Kitchen</option>
-              <option value="study_office">Study / Office</option>
-              <option value="dining_room">Dining Room</option>
-              <option value="bathroom">Bathroom</option>
-              <option value="storage">Storage</option>
-              <option value="balcony">Balcony</option>
-              <option value="entrance">Entrance</option>
-              <option value="shared_space">Shared Space</option>
-              <option value="other">Other</option>
-            </select>
-          </div>
+    <!-- LEFT -->
+    <div class="panel">
+      <h2>Room & Person</h2>
 
-          <!-- User Role -->
-          <div class="td-field">
-            <label for="roleSelect">Who is this room mainly for?</label>
-            <select id="roleSelect">
-              <option value="you">You</option>
-              <option value="partner">Partner / Spouse</option>
-              <option value="child">Child</option>
-              <option value="parent">Parent</option>
-              <option value="elder">Elder / Grandparent</option>
-              <option value="sibling">Sibling</option>
-              <option value="other">Other family member</option>
-            </select>
-          </div>
+      <label>Room type</label>
+      <select id="roomType">
+        <option value="master_bedroom">Master Bedroom</option>
+        <option value="bedroom">Bedroom</option>
+        <option value="living_room">Living Room</option>
+        <option value="kitchen">Kitchen</option>
+        <option value="study_office">Study / Office</option>
+        <option value="dining_room">Dining Room</option>
+        <option value="bathroom">Bathroom</option>
+        <option value="storage">Storage</option>
+        <option value="balcony">Balcony</option>
+        <option value="entrance">Entrance</option>
+        <option value="shared_space">Shared Space</option>
+        <option value="other">Other</option>
+      </select>
 
-          <!-- Shared Checkbox -->
-          <div class="td-field td-inline-field">
-            <input type="checkbox" id="sharedCheckbox" />
-            <label for="sharedCheckbox">You also use this room regularly</label>
-          </div>
+      <label>Who mainly uses this room?</label>
+      <select id="roleSelect">
+        <option value="you">You</option>
+        <option value="partner">Partner / Spouse</option>
+        <option value="child">Child</option>
+        <option value="parent">Parent</option>
+        <option value="elder">Elder</option>
+        <option value="sibling">Sibling</option>
+        <option value="other">Other family member</option>
+      </select>
 
-          <!-- Direction Grid -->
-          <div class="td-field">
-            <label>Room direction</label>
-            <div class="td-compass-wrapper">
-              <div class="td-compass-selected" id="compassSelected">
-                No direction selected yet.
-              </div>
-              <div class="td-compass-grid" id="directionGrid">
-                <button class="td-compass-btn" data-dir="NW">NW</button>
-                <button class="td-compass-btn" data-dir="N">N</button>
-                <button class="td-compass-btn" data-dir="NE">NE</button>
-
-                <button class="td-compass-btn" data-dir="W">W</button>
-                <button class="td-compass-btn center" disabled>Tap a direction</button>
-                <button class="td-compass-btn" data-dir="E">E</button>
-
-                <button class="td-compass-btn" data-dir="SW">SW</button>
-                <button class="td-compass-btn" data-dir="S">S</button>
-                <button class="td-compass-btn" data-dir="SE">SE</button>
-              </div>
-            </div>
-            <p class="td-help">
-              Stand in the room facing the main window/door, open your phone compass, and tap the direction you are facing.
-            </p>
-            <input type="hidden" id="directionValue" />
-          </div>
-
-          <!-- SIM Mode -->
-          <div class="td-field">
-            <label for="simSelect">Focus of this reading (intention)</label>
-            <select id="simSelect">
-              <option value="general">General wellbeing</option>
-              <option value="clarity">Clarity & focus</option>
-              <option value="grounding">Grounding & stability</option>
-              <option value="persona">Mood & persona</option>
-            </select>
-          </div>
-
-          <!-- Ambient BGM Toggle -->
-          <div class="td-field">
-            <label>Background music</label>
-            <button id="bgmToggle" class="td-btn-secondary">Play / Pause Ambient</button>
-          </div>
-
-          <!-- Analyse Button -->
-          <button id="analyseBtn" class="td-btn-primary">Analyse Room</button>
-        </div>
+      <div class="inline">
+        <input type="checkbox" id="sharedCheckbox" />
+        <label for="sharedCheckbox">You also use this room regularly</label>
       </div>
 
-      <!-- ===== RIGHT: RESULT PANEL ===== -->
-      <div class="td-right">
-        <div class="td-card">
-          <h2 class="td-right-title">Reading Output</h2>
+      <label>Room direction</label>
+      <div class="compass-selected" id="compassSelected">No direction selected.</div>
 
-          <div id="result-empty" class="td-result-empty">
-            Choose a room type, who it is for, a direction, and tap <strong>Analyse Room</strong> to see the reading here.
-          </div>
-
-          <div id="result-filled" class="hidden">
-            <div class="td-result-header">
-              <h2 id="res-hex-title"></h2>
-              <p id="res-room-meta"></p>
-            </div>
-
-            <div class="td-result-section">
-              <strong>Hexagram summary</strong>
-              <p id="res-summary"></p>
-            </div>
-
-            <div class="td-result-section">
-              <strong>Effect on this person</strong>
-              <p id="res-person"></p>
-            </div>
-
-            <div class="td-result-section">
-              <strong>Effect on your relationship</strong>
-              <p id="res-relationship"></p>
-            </div>
-
-            <div class="td-result-section">
-              <strong>Space usage tone</strong>
-              <p id="res-usage"></p>
-            </div>
-
-            <div class="td-result-section">
-              <strong>Energy tone</strong>
-              <p id="res-energy"></p>
-            </div>
-
-            <div class="td-result-section">
-              <strong>Your chosen intention</strong>
-              <p id="res-sim"></p>
-            </div>
-          </div>
-        </div>
+      <div class="compass" id="directionGrid">
+        <button data-dir="NW">NW</button>
+        <button data-dir="N">N</button>
+        <button data-dir="NE">NE</button>
+        <button data-dir="W">W</button>
+        <button class="center" disabled>Tap</button>
+        <button data-dir="E">E</button>
+        <button data-dir="SW">SW</button>
+        <button data-dir="S">S</button>
+        <button data-dir="SE">SE</button>
       </div>
 
-    </section>
+      <p class="help">
+        Stand in the room facing the main window or door, open your phone compass, and tap the direction you are facing.
+      </p>
 
-    <!-- ===== BODY END HELPER ===== -->
-    <section class="td-helper">
-      <div class="td-helper-card">
-        <strong>Note:</strong> This tool describes patterns and tendencies, not fixed outcomes.
-        Use it to better understand how each room’s direction might influence moods, behaviour, and the way you and your family relate to each other at home.
+      <input type="hidden" id="directionValue" />
+      <button class="btn" id="analyseBtn">Analyse Room</button>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="panel">
+      <h2>Reading Output</h2>
+
+      <div id="empty" class="empty">
+        Select room details and direction, then tap <strong>Analyse Room</strong>.
       </div>
-    </section>
-  </main>
 
-  <!-- ===== FOOTER CTA ===== -->
-  <footer class="td-footer">
-    <p>© Lumi Studio · Terra-Domus Free Edition</p>
-    <p>
-      For full Terra · Celestial · Persona readings, DM
-      <a href="https://instagram.com/lumistudio2025" target="_blank">@lumistudio2025</a>
-    </p>
-  </footer>
+      <div id="result" style="display:none">
+        <div class="result-section"><strong id="hexTitle"></strong></div>
+        <div class="result-section"><strong>Summary</strong><p id="summary"></p></div>
+        <div class="result-section"><strong>Effect on this person</strong><p id="person"></p></div>
+        <div class="result-section"><strong>Effect on your relationship</strong><p id="relation"></p></div>
+        <div class="result-section"><strong>Space usage tone</strong><p id="usage"></p></div>
+        <div class="result-section"><strong>Energy tone</strong><p id="energy"></p></div>
+      </div>
+    </div>
 
-  <!-- ===== SCRIPT: ENGINE + BGM + UI LOGIC ===== -->
-  <script src="assets/js/engine.js"></script>
-  <script src="assets/js/bgm.js"></script>
-  <script>
-    // ---- Compass UI ----
-    const compassButtons = document.querySelectorAll(".td-compass-btn");
-    const directionValueInput = document.getElementById("directionValue");
-    const compassSelected = document.getElementById("compassSelected");
+  </section>
+</main>
 
-    compassButtons.forEach(btn => {
-      if (btn.classList.contains("center")) return;
+<footer>
+  <p>© Lumi Studio · Terra-Domus Free Edition</p>
+  <p>
+    For one-to-one reading, please reach out to IG:
+    <a href="https://instagram.com/lumistudio2025" target="_blank">@lumistudio2025</a>
+  </p>
+</footer>
 
-      btn.addEventListener("click", () => {
-        compassButtons.forEach(b => b.classList.remove("active"));
-        btn.classList.add("active");
-        const dir = btn.dataset.dir;
-        directionValueInput.value = dir;
-        compassSelected.textContent = "Selected direction: " + dir;
-      });
+<script src="assets/js/engine.js"></script>
+
+<script>
+  const buttons = document.querySelectorAll(".compass button[data-dir]");
+  const dirInput = document.getElementById("directionValue");
+  const dirLabel = document.getElementById("compassSelected");
+
+  buttons.forEach(b => {
+    b.onclick = () => {
+      buttons.forEach(x => x.classList.remove("active"));
+      b.classList.add("active");
+      dirInput.value = b.dataset.dir;
+      dirLabel.textContent = "Selected direction: " + b.dataset.dir;
+    };
+  });
+
+  document.getElementById("analyseBtn").onclick = async () => {
+    const direction = dirInput.value;
+    if (!direction) return alert("Please select a direction.");
+
+    const reading = await TerraEngine.getRoomReading({
+      direction,
+      roomSeed: 1,
+      role: document.getElementById("roleSelect").value,
+      sharedWithUser: document.getElementById("sharedCheckbox").checked
     });
 
-    const ROOM_TYPES = [
-      "master_bedroom",
-      "bedroom",
-      "living_room",
-      "kitchen",
-      "study_office",
-      "dining_room",
-      "bathroom",
-      "storage",
-      "balcony",
-      "entrance",
-      "shared_space",
-      "other"
-    ];
+    if (reading.error) return alert("Unable to generate reading.");
 
-    const ROLE_TYPES = [
-      "you",
-      "partner",
-      "child",
-      "parent",
-      "elder",
-      "sibling",
-      "other"
-    ];
+    document.getElementById("empty").style.display = "none";
+    document.getElementById("result").style.display = "block";
 
-    function mapRoleLabel(role) {
-      switch ((role || "").toLowerCase()) {
-        case "partner": return "Partner";
-        case "child": return "Child";
-        case "parent": return "Parent";
-        case "elder": return "Elder";
-        case "sibling": return "Sibling";
-        case "other": return "Other";
-        case "you":
-        default: return "You";
-      }
-    }
+    document.getElementById("hexTitle").textContent =
+      reading.number + " · " + reading.name;
+    document.getElementById("summary").textContent = reading.summary;
+    document.getElementById("person").textContent = reading.personEffect;
+    document.getElementById("relation").textContent = reading.relationshipEffect;
+    document.getElementById("usage").textContent = reading.usage;
+    document.getElementById("energy").textContent = reading.energy;
+  };
+</script>
 
-    function mapRoomTypeLabel(rt) {
-      switch (rt) {
-        case "master_bedroom": return "Master Bedroom";
-        case "bedroom": return "Bedroom";
-        case "living_room": return "Living Room";
-        case "kitchen": return "Kitchen";
-        case "study_office": return "Study / Office";
-        case "dining_room": return "Dining Room";
-        case "bathroom": return "Bathroom";
-        case "storage": return "Storage";
-        case "balcony": return "Balcony";
-        case "entrance": return "Entrance";
-        case "shared_space": return "Shared Space";
-        case "other": return "Other";
-        default: return "Room";
-      }
-    }
-
-    const analyseBtn = document.getElementById("analyseBtn");
-    const resultEmpty = document.getElementById("result-empty");
-    const resultFilled = document.getElementById("result-filled");
-
-    analyseBtn.addEventListener("click", async () => {
-      const roomType = document.getElementById("roomType").value;
-      const role = document.getElementById("roleSelect").value;
-      const sharedWithUser = document.getElementById("sharedCheckbox").checked;
-      const direction = directionValueInput.value;
-      const simMode = document.getElementById("simSelect").value || "general";
-
-      if (!direction) {
-        alert("Please choose a direction from the compass grid.");
-        return;
-      }
-
-      // Deterministic seed based on room type + role
-      const rtIndex = Math.max(0, ROOM_TYPES.indexOf(roomType));
-      const roleIndex = Math.max(0, ROLE_TYPES.indexOf(role));
-      const roomSeed = rtIndex * 10 + roleIndex;
-
-      try {
-        const reading = await TerraEngine.getRoomReading({
-          direction,
-          simMode,
-          roomSeed,
-          role,
-          sharedWithUser
-        });
-
-        if (!reading || reading.error) {
-          alert("Unable to generate reading. Please try again.");
-          return;
-        }
-
-        const roleLabel = mapRoleLabel(role);
-        const roomLabel = mapRoomTypeLabel(roomType);
-
-        // Fill result panel
-        document.getElementById("res-hex-title").textContent =
-          `${reading.number} · ${reading.name}`;
-        document.getElementById("res-room-meta").textContent =
-          `${roomLabel} · ${roleLabel}${sharedWithUser ? " · Shared with you" : ""} · Direction ${direction}`;
-
-        document.getElementById("res-summary").textContent = reading.summary || "";
-        document.getElementById("res-person").textContent = reading.personEffect || "";
-        document.getElementById("res-relationship").textContent = reading.relationshipEffect || "";
-        document.getElementById("res-usage").textContent = reading.usage || "";
-        document.getElementById("res-energy").textContent = reading.energy || "";
-        document.getElementById("res-sim").textContent = reading.simTag || simMode;
-
-        resultEmpty.classList.add("hidden");
-        resultFilled.classList.remove("hidden");
-      } catch (err) {
-        console.error(err);
-        alert("Something went wrong while generating the reading.");
-      }
-    });
-  </script>
 </body>
 </html>
