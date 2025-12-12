@@ -2,35 +2,28 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lumi Terra · Home Influence Reading</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Lumi CSS -->
-  <link rel="stylesheet" href="assets/css/base.css" />
-  <link rel="stylesheet" href="assets/css/hexagram.css" />
-  <link rel="stylesheet" href="assets/css/cta.css" />
-  <link rel="stylesheet" href="assets/css/popup.css" />
-
-  <!-- Fonts -->
+  <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet" />
 </head>
 
 <body>
-
-  <!-- ===================== HEADER ===================== -->
+  <!-- ===== HEADER ===== -->
   <header class="header">
     <h1 class="title">Lumi Terra</h1>
-    <p class="subtitle">Understand how your space influences your emotional and energetic flow</p>
+    <p class="subtitle">
+      Understand how your space influences your emotional and energetic flow.
+    </p>
   </header>
 
+  <!-- ===== MAIN TOOL ===== -->
+  <main class="tool">
 
-  <!-- ===================== MAIN UI ===================== -->
-  <section class="tool-section">
-
-    <!-- Direction -->
-    <div class="input-block">
-      <label>Room Direction</label>
+    <div class="input-row">
+      <label for="directionSelect">Room Direction</label>
       <select id="directionSelect">
         <option value="N">North</option>
         <option value="NE">Northeast</option>
@@ -43,9 +36,8 @@
       </select>
     </div>
 
-    <!-- SIM intention -->
-    <div class="input-block">
-      <label>Your Intention</label>
+    <div class="input-row">
+      <label for="simSelect">Your Intention</label>
       <select id="simSelect">
         <option value="general">General</option>
         <option value="clarity">Clarity</option>
@@ -54,59 +46,105 @@
       </select>
     </div>
 
-    <!-- Room Index (for variety) -->
-    <div class="input-block">
-      <label>Room Variation (optional)</label>
-      <input id="roomIndex" type="number" placeholder="0" />
+    <div class="input-row">
+      <label for="roomIndex">Room variation (optional)</label>
+      <input id="roomIndex" type="number" placeholder="0" min="0" />
     </div>
 
-    <!-- BGM Toggle -->
-    <div class="input-block">
+    <div class="input-row">
       <label>Background Music</label>
-      <button id="bgmToggle" class="main-btn">Play / Pause BGM</button>
+      <button id="bgmToggle" class="btn-secondary">Play / Pause</button>
     </div>
 
-    <!-- Analyse Button -->
-    <button id="analyseBtn" class="analyse-btn">Analyse My Home</button>
-  </section>
+    <button id="analyseBtn" class="btn-primary">Analyse My Home</button>
+  </main>
 
-
-  <!-- ===================== RESULT MODAL ===================== -->
+  <!-- ===== RESULT MODAL (CENTER) ===== -->
   <div id="readingModal" class="modal">
     <div class="modal-content">
-      <span class="closeBtn" onclick="document.getElementById('readingModal').classList.remove('show')">✕</span>
+      <button class="modal-close" id="modalCloseBtn">✕</button>
 
       <h2 id="reading-title"></h2>
 
-      <p><strong>Summary:</strong> <span id="reading-summary"></span></p>
-      <p><strong>Effect on You:</strong> <span id="reading-impact"></span></p>
-      <p><strong>Usage:</strong> <span id="reading-usage"></span></p>
-      <p><strong>Energy Tone:</strong> <span id="reading-energy"></span></p>
-      <p><strong>Your Intention:</strong> <span id="reading-sim"></span></p>
+      <p><strong>Summary:</strong>
+        <span id="reading-summary"></span>
+      </p>
+
+      <p><strong>Effect on You:</strong>
+        <span id="reading-impact"></span>
+      </p>
+
+      <p><strong>Usage:</strong>
+        <span id="reading-usage"></span>
+      </p>
+
+      <p><strong>Energy Tone:</strong>
+        <span id="reading-energy"></span>
+      </p>
+
+      <p><strong>Your Intention:</strong>
+        <span id="reading-sim"></span>
+      </p>
     </div>
   </div>
 
-
-  <!-- ===================== CTA SECTION ===================== -->
-  <section id="cta-section" class="cta-box">
-    <h3 class="cta-title">✨ Lumi Studio · Free Terra Reading</h3>
-    <p class="cta-text">
-      This is a <strong>basic spatial reading</strong> showing how your environment may influence your emotional and behavioral tone.
-      For a full personalised analysis, contact Lumi Studio:
+  <!-- ===== CTA ===== -->
+  <section class="cta">
+    <h3>✨ Lumi Studio · Free Terra Reading</h3>
+    <p>
+      This is a basic spatial reading showing how your environment may
+      influence your emotional and behavioural tone.
     </p>
-
-    <a href="https://instagram.com/lumistudio2025" target="_blank" class="cta-btn">
+    <p>For a complete personalised reading, contact us on Instagram:</p>
+    <a class="cta-btn" href="https://instagram.com/lumistudio2025" target="_blank">
       ➜ IG @lumistudio2025
     </a>
-
-    <p class="cta-small">Full Terra・Celestial・Persona readings available for patrons & clients.</p>
+    <p class="cta-small">
+      Full Terra · Celestial · Persona readings available for patrons & clients.
+    </p>
   </section>
 
-
-  <!-- ===================== SCRIPTS ===================== -->
-  <script type="module" src="assets/js/engine.js"></script>
-  <script type="module" src="assets/js/app.js"></script>
+  <!-- ===== SCRIPTS ===== -->
+  <script src="assets/js/engine.js"></script>
   <script src="assets/js/bgm.js"></script>
+  <script>
+    // ---- UI ↔ Engine wiring (no extra JS file needed) ----
+    const analyseBtn = document.getElementById("analyseBtn");
+    const modal = document.getElementById("readingModal");
+    const modalCloseBtn = document.getElementById("modalCloseBtn");
 
+    analyseBtn.addEventListener("click", async () => {
+      const direction = document.getElementById("directionSelect").value;
+      const simMode = document.getElementById("simSelect").value || "general";
+      const roomIndex = Number(document.getElementById("roomIndex").value) || 0;
+
+      const reading = await TerraEngine.getReading(direction, simMode, roomIndex);
+
+      if (!reading || reading.error) {
+        alert("Unable to generate reading. Please try again.");
+        return;
+      }
+
+      document.getElementById("reading-title").innerText =
+        `${reading.number} ｜ ${reading.name}`;
+
+      document.getElementById("reading-summary").innerText = reading.summary;
+      document.getElementById("reading-impact").innerText = reading.homeImpact;
+      document.getElementById("reading-usage").innerText = reading.usage;
+      document.getElementById("reading-energy").innerText = reading.energy;
+      document.getElementById("reading-sim").innerText = reading.simTag;
+
+      modal.classList.add("show");
+    });
+
+    modalCloseBtn.addEventListener("click", () => {
+      modal.classList.remove("show");
+    });
+
+    // click outside to close
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) modal.classList.remove("show");
+    });
+  </script>
 </body>
 </html>
