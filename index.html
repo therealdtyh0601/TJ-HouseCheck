@@ -9,6 +9,7 @@
   <!-- ===== CSS ===== -->
   <link rel="stylesheet" href="assets/css/base.css" />
   <link rel="stylesheet" href="assets/css/hexagram.css" />
+  <link rel="stylesheet" href="assets/css/sim.css" />
 
   <!-- ===== JS Engines ===== -->
   <script src="assets/js/engine/hexagramEngine.js" defer></script>
@@ -36,18 +37,19 @@
   <!-- ========================= MAIN SECTION ========================= -->
   <main class="container">
 
+    <!-- ===== HERO ===== -->
     <section class="hero-block">
       <h1 class="title">🏡 Terra Hexagram Reading</h1>
       <p class="subtitle">Move-in • Renovation • Home Energy Flow</p>
       <p class="desc">
-        Select your house direction and receive a simple, modern 64-hexagram
-        interpretation tailored to everyday living.
+        Select your house direction and intention to receive a clear, modern
+        interpretation based on the complete 64-hexagram Terra engine.
       </p>
     </section>
 
-    <!-- ===== Input Section ===== -->
+    <!-- ===== INPUT 1: DIRECTION ===== -->
     <section class="input-panel">
-      <h2>Select Your House Direction</h2>
+      <h2>Step 1 — Select Your House Direction</h2>
 
       <select id="directionSelect">
         <option value="">— Choose —</option>
@@ -60,11 +62,64 @@
         <option value="W">West</option>
         <option value="NW">Northwest</option>
       </select>
-
-      <button id="analyzeBtn" class="primary-btn">Analyze My House Flow</button>
     </section>
 
-    <!-- ===== CTA Block ===== -->
+    <!-- ===== INPUT 2: SIM (PRO MODE) ===== -->
+    <section class="sim-section">
+      <h2>Step 2 — What Is the Intention of This Space?</h2>
+      <p class="sim-desc">Choose the intention closest to how you use or want to use your home space.</p>
+
+      <div class="sim-grid">
+
+        <div class="sim-card" data-sim="stability">
+          <span class="sim-icon">🏡</span>
+          <p>Stability & Home Life</p>
+        </div>
+
+        <div class="sim-card" data-sim="career">
+          <span class="sim-icon">🚀</span>
+          <p>Career & Movement</p>
+        </div>
+
+        <div class="sim-card" data-sim="health">
+          <span class="sim-icon">🌿</span>
+          <p>Health & Well-being</p>
+        </div>
+
+        <div class="sim-card" data-sim="inner">
+          <span class="sim-icon">💙</span>
+          <p>Inner Self / Emotional Space</p>
+        </div>
+
+        <div class="sim-card" data-sim="growth">
+          <span class="sim-icon">📈</span>
+          <p>Growth & Progression</p>
+        </div>
+
+        <div class="sim-card" data-sim="visibility">
+          <span class="sim-icon">🔥</span>
+          <p>Visibility / Influence</p>
+        </div>
+
+        <div class="sim-card" data-sim="harmony">
+          <span class="sim-icon">🤝</span>
+          <p>Relationships & Harmony</p>
+        </div>
+
+        <div class="sim-card" data-sim="purpose">
+          <span class="sim-icon">⭐</span>
+          <p>Purpose & Direction</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== ANALYZE BUTTON ===== -->
+    <div class="analyze-wrapper">
+      <button id="analyzeBtn" class="primary-btn">Analyze My Home Energy Flow</button>
+    </div>
+
+    <!-- ===== CTA ===== -->
     <section class="cta-block">
       <p>Enjoying Lumi Tools?</p>
       <a class="cta-ig" href="https://www.instagram.com/lumistudios2025" target="_blank">
@@ -74,7 +129,7 @@
 
   </main>
 
-  <!-- ========================= RESULT POPUP ========================= -->
+  <!-- ========================= RESULT MODAL ========================= -->
   <div id="resultModal" class="modal hidden">
     <div class="modal-content">
       <span class="close-btn" id="closeModal">&times;</span>
