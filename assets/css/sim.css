@@ -1,0 +1,76 @@
+/* -------------------------------------------------------------
+   sim.css — Space Intention Model UI (SIM)
+   Lumi Studio • Minimal • Soft Glow • Modern Spiritual-Tech
+------------------------------------------------------------- */
+
+/* Section container */
+.sim-section {
+  margin: 40px 0 30px;
+  text-align: center;
+}
+
+.sim-section h2 {
+  font-size: 1.4rem;
+  color: #AFC6FF;
+  margin-bottom: 6px;
+}
+
+.sim-desc {
+  font-size: 0.9rem;
+  opacity: 0.85;
+  margin-bottom: 20px;
+  color: #d7e1ff;
+}
+
+/* SIM Grid */
+.sim-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 16px;
+  padding: 0 10px;
+}
+
+/* SIM Card */
+.sim-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(175, 198, 255, 0.3);
+  border-radius: 14px;
+  padding: 18px 10px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  color: #eef2ff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sim-card:hover {
+  background: rgba(175, 198, 255, 0.12);
+  transform: translateY(-3px);
+  border-color: rgba(175, 198, 255, 0.5);
+}
+
+.sim-icon {
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+}
+
+.sim-card p {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Selected state */
+.sim-card.selected {
+  background: rgba(175, 198, 255, 0.18);
+  border: 1px solid #AFC6FF;
+  box-shadow: 0 0 10px rgba(175, 198, 255, 0.4);
+  transform: translateY(-4px);
+}
+
+/* Analyze button wrapper */
+.analyze-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
