@@ -2,37 +2,47 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Home Space Reflection</title>
+  <title>🏠 Home Space Reflection</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Styles -->
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
 
+<!-- ================= HEADER ================= -->
 <header>
   <h1>🏠 Home Space Reflection</h1>
   <p>
-    A quiet way to reflect on how different parts of a home influence people
-    and family dynamics.
+    A simple way to reflect on how different parts of a home
+    influence people and family dynamics.
   </p>
 </header>
 
+<!-- ================= MAIN ================= -->
 <main>
+
+  <!-- ---------- INPUT PANEL ---------- -->
   <section class="inputs">
     <h2>🧭 Space Details</h2>
 
+    <!-- Direction -->
     <label>Room Direction</label>
     <div class="direction-grid">
       <button data-dir="NW">↖ NW</button>
       <button data-dir="N">↑ N</button>
       <button data-dir="NE">↗ NE</button>
+
       <button data-dir="W">← W</button>
       <button data-dir="C">•</button>
       <button data-dir="E">→ E</button>
+
       <button data-dir="SW">↙ SW</button>
       <button data-dir="S">↓ S</button>
       <button data-dir="SE">↘ SE</button>
     </div>
 
+    <!-- Room Type -->
     <label>Room Type</label>
     <select id="roomType">
       <option>Bedroom</option>
@@ -42,6 +52,7 @@
       <option>Other</option>
     </select>
 
+    <!-- Main User -->
     <label>Main User of This Room</label>
     <select id="role">
       <option value="you">You</option>
@@ -52,6 +63,7 @@
       <option value="other">Other</option>
     </select>
 
+    <!-- Relationship Focus -->
     <label>Relationship Focus</label>
     <select id="relation">
       <option value="partner">Partner</option>
@@ -61,64 +73,77 @@
       <option value="family">Family in general</option>
     </select>
 
-    <label>
+    <!-- Shared -->
+    <label class="checkbox">
       <input type="checkbox" id="shared" />
       Shared space with you
     </label>
 
+    <!-- Action -->
     <button id="analyze">🔍 Reflect on This Space</button>
   </section>
 
+  <!-- ---------- OUTPUT PANEL ---------- -->
   <section class="output">
     <h2>🌊 Reflection</h2>
+
     <div id="result">
       <p class="placeholder">
-        Select the details on the left to see how this space may influence
-        the people and relationships connected to it.
+        Select the details on the left to see how this space
+        may influence the people and relationships connected to it.
       </p>
     </div>
   </section>
+
 </main>
 
+<!-- ================= FOOTER ================= -->
 <footer>
   <p>
-    💬 For a full one-to-one reading, reach out on IG:
+    💬 For a full one-to-one reading, please reach out on IG:
     <strong>@lumistudio2025</strong>
   </p>
 </footer>
 
+<!-- ================= SCRIPT ================= -->
 <script src="assets/js/engine.js"></script>
 <script>
-let selectedDirection = null;
+  let selectedDirection = null;
 
-document.querySelectorAll(".direction-grid button").forEach(btn => {
-  btn.addEventListener("click", () => {
-    document.querySelectorAll(".direction-grid button").forEach(b => b.classList.remove("active"));
-    btn.classList.add("active");
-    selectedDirection = btn.dataset.dir;
-  });
-});
+  // Direction selection
+  document.querySelectorAll(".direction-grid button").forEach(btn => {
+    btn.addEventListener("click", () => {
+      document.querySelectorAll(".direction-grid button")
+        .forEach(b => b.classList.remove("active"));
 
-document.getElementById("analyze").addEventListener("click", async () => {
-  if (!selectedDirection) {
-    alert("Please select a room direction.");
-    return;
-  }
-
-  const data = await TerraEngine.getRoomReading({
-    direction: selectedDirection,
-    roomSeed: 1,
-    role: document.getElementById("role").value,
-    relation: document.getElementById("relation").value,
-    shared: document.getElementById("shared").checked
+      btn.classList.add("active");
+      selectedDirection = btn.dataset.dir;
+    });
   });
 
-  document.getElementById("result").innerHTML = `
-    <p><strong>🧭 Space Nature</strong><br>${data.summary}</p>
-    <p><strong>👤 Impact on Person</strong><br>${data.homeImpact}</p>
-    <p><strong>👥 Relationship Influence</strong><br>${data.relationshipImpact}</p>
-  `;
-});
+  // Analyze
+  document.getElementById("analyze").addEventListener("click", async () => {
+    if (!selectedDirection) {
+      alert("Please select a room direction.");
+      return;
+    }
+
+    const result = await TerraEngine.getRoomReading({
+      direction: selectedDirection,
+      roomSeed: 1,
+      roomType: document.getElementById("roomType").value,
+      role: document.getElementById("role").value,
+      relation: document.getElementById("relation").value,
+      shared: document.getElementById("shared").checked
+    });
+
+    document.getElementById("result").innerHTML = `
+      <p><strong>🧭 Space Nature</strong><br>${result.summary}</p>
+      <p><strong>👤 Impact on Person</strong><br>${result.homeImpact}</p>
+      <p><strong>👥 Relationship Influence</strong><br>${result.relationshipImpact}</p>
+    `;
+  });
 </script>
+
 </body>
 </html>
