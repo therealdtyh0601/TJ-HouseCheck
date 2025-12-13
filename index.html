@@ -2,329 +2,123 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Lumi Terra · Terra-Domus</title>
+  <title>Home Space Reflection</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <!-- Optional shared CSS -->
   <link rel="stylesheet" href="assets/css/style.css" />
-
-  <style>
-    :root {
-      --bg: #0A1D40;
-      --card: rgba(255,255,255,0.06);
-      --border: rgba(255,255,255,0.14);
-      --text: #EAF1FF;
-      --sub: #9FB3D9;
-      --accent: #AFC6FF;
-    }
-
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      background: radial-gradient(circle at top, #122a63 0, var(--bg) 45%, #040918 100%);
-      color: var(--text);
-      min-height: 100vh;
-    }
-
-    header {
-      text-align: center;
-      padding: 20px 16px 10px;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 1.5rem;
-      letter-spacing: .06em;
-      text-transform: uppercase;
-    }
-
-    header p {
-      margin: 6px 0 0;
-      font-size: .9rem;
-      color: var(--sub);
-    }
-
-    main {
-      max-width: 1100px;
-      margin: auto;
-      padding: 10px 16px 24px;
-    }
-
-    .layout {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-
-    .panel {
-      flex: 1 1 320px;
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 16px;
-      backdrop-filter: blur(10px);
-      box-shadow: 0 18px 40px rgba(0,0,0,.45);
-    }
-
-    h2 {
-      margin: 0 0 12px;
-      font-size: 1.05rem;
-      color: var(--accent);
-      text-transform: uppercase;
-      letter-spacing: .04em;
-    }
-
-    label {
-      display: block;
-      font-size: .8rem;
-      color: var(--sub);
-      margin: 10px 0 4px;
-    }
-
-    select, input[type="checkbox"] {
-      width: 100%;
-      padding: 8px 10px;
-      border-radius: 10px;
-      background: rgba(3,8,30,.9);
-      color: var(--text);
-      border: 1px solid var(--border);
-    }
-
-    .inline {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin-top: 8px;
-      font-size: .85rem;
-      color: var(--sub);
-    }
-
-    .compass-selected {
-      font-size: .85rem;
-      color: var(--accent);
-      margin-bottom: 6px;
-      min-height: 1.2em;
-    }
-
-    .compass {
-      display: grid;
-      grid-template-columns: repeat(3,1fr);
-      gap: 4px;
-    }
-
-    .compass button {
-      padding: 10px 0;
-      border-radius: 10px;
-      border: 1px solid var(--border);
-      background: rgba(5,12,35,.9);
-      color: var(--sub);
-      cursor: pointer;
-    }
-
-    .compass button.active {
-      background: linear-gradient(135deg, rgba(175,198,255,.35), rgba(10,29,64,.95));
-      color: #fff;
-      border-color: #fff;
-      box-shadow: 0 0 10px rgba(175,198,255,.6);
-    }
-
-    .compass .center {
-      cursor: default;
-      opacity: .4;
-      font-size: .7rem;
-    }
-
-    .help {
-      font-size: .75rem;
-      color: var(--sub);
-      margin-top: 6px;
-    }
-
-    .btn {
-      margin-top: 12px;
-      width: 100%;
-      padding: 10px;
-      border-radius: 12px;
-      border: none;
-      font-weight: 600;
-      cursor: pointer;
-      background: var(--accent);
-      color: #040918;
-    }
-
-    .empty {
-      text-align: center;
-      color: var(--sub);
-      padding: 28px 10px;
-      font-size: .9rem;
-    }
-
-    .result-section {
-      margin-top: 10px;
-      font-size: .86rem;
-    }
-
-    .result-section strong {
-      color: var(--accent);
-    }
-
-    footer {
-      border-top: 1px solid rgba(255,255,255,.12);
-      text-align: center;
-      padding: 14px 10px 18px;
-      font-size: .8rem;
-      color: var(--sub);
-    }
-
-    footer a {
-      color: var(--accent);
-      text-decoration: none;
-      font-weight: 500;
-    }
-  </style>
 </head>
-
 <body>
 
 <header>
-  <h1>Lumi Terra · Terra-Domus</h1>
-  <p>Direction-based insight on how a space may influence a family member and your relationship.</p>
+  <h1>🏠 Home Space Reflection</h1>
+  <p>
+    A quiet way to reflect on how different parts of a home influence people
+    and family dynamics.
+  </p>
 </header>
 
 <main>
-  <section class="layout">
+  <section class="inputs">
+    <h2>🧭 Space Details</h2>
 
-    <!-- LEFT -->
-    <div class="panel">
-      <h2>Room & Person</h2>
+    <label>Room Direction</label>
+    <div class="direction-grid">
+      <button data-dir="NW">↖ NW</button>
+      <button data-dir="N">↑ N</button>
+      <button data-dir="NE">↗ NE</button>
+      <button data-dir="W">← W</button>
+      <button data-dir="C">•</button>
+      <button data-dir="E">→ E</button>
+      <button data-dir="SW">↙ SW</button>
+      <button data-dir="S">↓ S</button>
+      <button data-dir="SE">↘ SE</button>
+    </div>
 
-      <label>Room type</label>
-      <select id="roomType">
-        <option value="master_bedroom">Master Bedroom</option>
-        <option value="bedroom">Bedroom</option>
-        <option value="living_room">Living Room</option>
-        <option value="kitchen">Kitchen</option>
-        <option value="study_office">Study / Office</option>
-        <option value="dining_room">Dining Room</option>
-        <option value="bathroom">Bathroom</option>
-        <option value="storage">Storage</option>
-        <option value="balcony">Balcony</option>
-        <option value="entrance">Entrance</option>
-        <option value="shared_space">Shared Space</option>
-        <option value="other">Other</option>
-      </select>
+    <label>Room Type</label>
+    <select id="roomType">
+      <option>Bedroom</option>
+      <option>Living Room</option>
+      <option>Study / Office</option>
+      <option>Kitchen</option>
+      <option>Other</option>
+    </select>
 
-      <label>Who mainly uses this room?</label>
-      <select id="roleSelect">
-        <option value="you">You</option>
-        <option value="partner">Partner / Spouse</option>
-        <option value="child">Child</option>
-        <option value="parent">Parent</option>
-        <option value="elder">Elder</option>
-        <option value="sibling">Sibling</option>
-        <option value="other">Other family member</option>
-      </select>
+    <label>Main User of This Room</label>
+    <select id="role">
+      <option value="you">You</option>
+      <option value="partner">Partner</option>
+      <option value="child">Child</option>
+      <option value="parent">Parent</option>
+      <option value="sibling">Sibling</option>
+      <option value="other">Other</option>
+    </select>
 
-      <div class="inline">
-        <input type="checkbox" id="sharedCheckbox" />
-        <label for="sharedCheckbox">You also use this room regularly</label>
-      </div>
+    <label>Relationship Focus</label>
+    <select id="relation">
+      <option value="partner">Partner</option>
+      <option value="child">Child</option>
+      <option value="parent">Parent</option>
+      <option value="sibling">Sibling</option>
+      <option value="family">Family in general</option>
+    </select>
 
-      <label>Room direction</label>
-      <div class="compass-selected" id="compassSelected">No direction selected.</div>
+    <label>
+      <input type="checkbox" id="shared" />
+      Shared space with you
+    </label>
 
-      <div class="compass" id="directionGrid">
-        <button data-dir="NW">NW</button>
-        <button data-dir="N">N</button>
-        <button data-dir="NE">NE</button>
-        <button data-dir="W">W</button>
-        <button class="center" disabled>Tap</button>
-        <button data-dir="E">E</button>
-        <button data-dir="SW">SW</button>
-        <button data-dir="S">S</button>
-        <button data-dir="SE">SE</button>
-      </div>
+    <button id="analyze">🔍 Reflect on This Space</button>
+  </section>
 
-      <p class="help">
-        Stand in the room facing the main window or door, open your phone compass, and tap the direction you are facing.
+  <section class="output">
+    <h2>🌊 Reflection</h2>
+    <div id="result">
+      <p class="placeholder">
+        Select the details on the left to see how this space may influence
+        the people and relationships connected to it.
       </p>
-
-      <input type="hidden" id="directionValue" />
-      <button class="btn" id="analyseBtn">Analyse Room</button>
     </div>
-
-    <!-- RIGHT -->
-    <div class="panel">
-      <h2>Reading Output</h2>
-
-      <div id="empty" class="empty">
-        Select room details and direction, then tap <strong>Analyse Room</strong>.
-      </div>
-
-      <div id="result" style="display:none">
-        <div class="result-section"><strong id="hexTitle"></strong></div>
-        <div class="result-section"><strong>Summary</strong><p id="summary"></p></div>
-        <div class="result-section"><strong>Effect on this person</strong><p id="person"></p></div>
-        <div class="result-section"><strong>Effect on your relationship</strong><p id="relation"></p></div>
-        <div class="result-section"><strong>Space usage tone</strong><p id="usage"></p></div>
-        <div class="result-section"><strong>Energy tone</strong><p id="energy"></p></div>
-      </div>
-    </div>
-
   </section>
 </main>
 
 <footer>
-  <p>© Lumi Studio · Terra-Domus Free Edition</p>
   <p>
-    For one-to-one reading, please reach out to IG:
-    <a href="https://instagram.com/lumistudio2025" target="_blank">@lumistudio2025</a>
+    💬 For a full one-to-one reading, reach out on IG:
+    <strong>@lumistudio2025</strong>
   </p>
 </footer>
 
 <script src="assets/js/engine.js"></script>
-
 <script>
-  const buttons = document.querySelectorAll(".compass button[data-dir]");
-  const dirInput = document.getElementById("directionValue");
-  const dirLabel = document.getElementById("compassSelected");
+let selectedDirection = null;
 
-  buttons.forEach(b => {
-    b.onclick = () => {
-      buttons.forEach(x => x.classList.remove("active"));
-      b.classList.add("active");
-      dirInput.value = b.dataset.dir;
-      dirLabel.textContent = "Selected direction: " + b.dataset.dir;
-    };
+document.querySelectorAll(".direction-grid button").forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.querySelectorAll(".direction-grid button").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    selectedDirection = btn.dataset.dir;
+  });
+});
+
+document.getElementById("analyze").addEventListener("click", async () => {
+  if (!selectedDirection) {
+    alert("Please select a room direction.");
+    return;
+  }
+
+  const data = await TerraEngine.getRoomReading({
+    direction: selectedDirection,
+    roomSeed: 1,
+    role: document.getElementById("role").value,
+    relation: document.getElementById("relation").value,
+    shared: document.getElementById("shared").checked
   });
 
-  document.getElementById("analyseBtn").onclick = async () => {
-    const direction = dirInput.value;
-    if (!direction) return alert("Please select a direction.");
-
-    const reading = await TerraEngine.getRoomReading({
-      direction,
-      roomSeed: 1,
-      role: document.getElementById("roleSelect").value,
-      sharedWithUser: document.getElementById("sharedCheckbox").checked
-    });
-
-    if (reading.error) return alert("Unable to generate reading.");
-
-    document.getElementById("empty").style.display = "none";
-    document.getElementById("result").style.display = "block";
-
-    document.getElementById("hexTitle").textContent =
-      reading.number + " · " + reading.name;
-    document.getElementById("summary").textContent = reading.summary;
-    document.getElementById("person").textContent = reading.personEffect;
-    document.getElementById("relation").textContent = reading.relationshipEffect;
-    document.getElementById("usage").textContent = reading.usage;
-    document.getElementById("energy").textContent = reading.energy;
-  };
+  document.getElementById("result").innerHTML = `
+    <p><strong>🧭 Space Nature</strong><br>${data.summary}</p>
+    <p><strong>👤 Impact on Person</strong><br>${data.homeImpact}</p>
+    <p><strong>👥 Relationship Influence</strong><br>${data.relationshipImpact}</p>
+  `;
+});
 </script>
-
 </body>
 </html>
