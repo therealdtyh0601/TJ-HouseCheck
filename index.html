@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>🏠 阳宅三部曲 Lite · Lumi Free</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">🌙</div>
+      <div>
+        <div class="title">阳宅三部曲 Lite</div>
+        <div class="subtitle">后天八卦看宅 · Free App</div>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button id="btnReset" class="btn ghost" type="button">🧽 清空</button>
+      <button id="btnDemo" class="btn ghost" type="button">✨ 示例</button>
+      <button id="btnExport" class="btn" type="button">📄 导出摘要</button>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="card">
+      <h2>🧭 使用方式</h2>
+      <p class="muted">
+        你不用懂飞星、也不用算命。只要照着三步选一选：<b>谁住哪里、谁常用哪里、哪里是什么空间</b>。
+        系统会按权重整合：<b>卧室内挂(60%) ＞ 人物外挂(25%) ＞ 其他空间(15%)</b>。
+      </p>
+      <div class="pillrow">
+        <span class="pill">① 🛏️ 卧室内挂</span>
+        <span class="pill">② 🛋️ 人物外挂</span>
+        <span class="pill">③ 🚽🍳🌞 其他空间</span>
+      </div>
+    </section>
+
+    <section class="grid2">
+      <section class="card">
+        <h2>① 🛏️ 卧室内挂（最重要）</h2>
+        <p class="muted">每个方位：选「谁在这里睡/住」。没有就选「—」。</p>
+        <div id="gridInside" class="bagua-grid"></div>
+      </section>
+
+      <section class="card">
+        <h2>② 🛋️ 家庭人物外挂</h2>
+        <p class="muted">每个方位：选「谁常坐/常办公/常待」。没有就选「—」。</p>
+        <div id="gridOutside" class="bagua-grid"></div>
+      </section>
+
+      <section class="card">
+        <h2>③ 🚽🍳🌞 其他空间</h2>
+        <p class="muted">每个方位：选空间类型。没有就选「—」。</p>
+        <div id="gridSpaces" class="bagua-grid"></div>
+      </section>
+
+      <section class="card">
+        <h2>📌 结果</h2>
+        <div class="resultHead">
+          <div class="chip">权重：🛏️60% · 🛋️25% · 🚽🍳🌞15%</div>
+          <div class="chip">提示：先看“谁被点名最多”</div>
+        </div>
+        <div id="result" class="result"></div>
+      </section>
+    </section>
+
+    <footer class="foot muted">
+      Lumi Free · 本工具用于生活观察与空间整理，不替代医疗/法律/财务等专业建议。
+    </footer>
+  </main>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
